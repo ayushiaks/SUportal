@@ -18,7 +18,7 @@
 require_once __DIR__.'/vendor/autoload.php';
 const CLIENT_ID = '857163472597-2orvmu9sh01qvfadeqg8lb18mkftc839.apps.googleusercontent.com';
 const CLIENT_SECRET = 'BxP5-5k_RuAF7sFFFiALctud';
-const REDIRECT_URI = 'http://localhost:81/googleapi/';
+const REDIRECT_URI = 'http://localhost/SUportal/';
 session_start();
 /* 
  * INITIALIZATION
@@ -93,17 +93,21 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
-        echo "<a class='login' href='" . $authUrl . "'><img src='glogin.png' height='50px'/></a>";
+        echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
     } else {
-        print "ID: {$id} <br>";
+        /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
         print "Email: {$email } <br>";
         print "Image : {$profile_image_url} <br>";
         print "Cover  :{$cover_image_url} <br>";
         print "Url: {$profile_url} <br><br>";
-        echo "<a class='logout' href='?logout'><button>Logout</button></a>";
-        echo "<a href='land.html'>Proceed</a>"
-        ;
+        echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
+
+        if(strpos($email, '@hyderabad.bits-pilani.ac.in') !== false){
+        header('Location: land.html')        ;}
+        else{
+          echo"Login failed. Login with Bitsmail.";
+        }
     }
     ?>
 </div>
