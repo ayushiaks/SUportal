@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#gr_others").hide();
+
+				$( "#gr_choice_3" ).change(function() {
+	  				var val = $("#gr_choice_3").val();
+					if(val=="Other"){
+					    $("#gr_others").show();
+					} else {
+					    $("#gr_others").hide();
+					}
+					});
+			});
+		</script>
+	</head>
+	<body>
+		<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
+			NAME : <input type="text" name="name"><br>
+			ID No. : <input type="text" name="id"><br>
+			Bits Email ID : <input type="text" name="email"><br>
+			Phone Number : <input type="text" name="phno"><br>
+			Room Number : <input type="text" name="rmno"><br>
+			Grievance ON :<br>  
+				<input type="radio" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br>
+				<input type="radio" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br>
+				<input type="radio" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others (Please Specify)</label><br>
+				<input type="text" name="gr_others" id="gr_others"><br>
+			Grievance :<br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
+			<input class="fomr" type="submit" name="submit" value="Submit">	
+			<p><?php echo $error1." ".$error2; ?></p>
+		</form>
+	</body>
+</html>
