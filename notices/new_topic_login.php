@@ -2,12 +2,12 @@
 session_start();
 require('database.php');
 
-if (isset($_POST['username']) and isset($_POST['password'])){
+if (isset($_POST['username']) && isset($_POST['password'])){
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = "SELECT * FROM `newtopic` WHERE username='$username' and password='$password'";
+$query = "SELECT * FROM `newtopic` WHERE username=`".$username."` AND password =`".$password."` ";
  
 $result = mysqli_query($con, $query) or die(mysqli_error($con));
 $count = mysqli_num_rows($result);
