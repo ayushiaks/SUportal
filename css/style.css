@@ -63,3 +63,47 @@ body {
 .category:hover > .more {
     visibility: visible;
 }
+#wrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 100vh; */
+}
+#su-list > .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li.post {
+    padding: 20px;
+}
+.form-con {
+    width: 100vw;
+}
+.form-con input,textarea {
+    width: 100%;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.form-con input:focus,textarea {
+    color: black;
+}
+input.submit {
+    color: black;
+}
+#cng-head {
+    font-size: 2.5em;
+    padding: 30px;
+}
+.form-con > p {
+    padding: 20px;
+}
