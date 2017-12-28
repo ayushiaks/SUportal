@@ -41,7 +41,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."president-".$filename);
+					move_uploaded_file($tmp_name, $location."president.jpg");
 				}
 			}
 		}	
@@ -87,7 +87,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."gensec-".$filename);
+					move_uploaded_file($tmp_name, $location."gensec.jpg");
 				}
 			}
 		}	
@@ -133,7 +133,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."tc-".$filename);
+					move_uploaded_file($tmp_name, $location."tc.jpg");
 				}
 			}
 		}	
@@ -181,7 +181,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."sports-b-".$filename);
+					move_uploaded_file($tmp_name, $location."sports-b.jpg");
 				}
 			}
 		}	
@@ -228,7 +228,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."sports-g-".$filename);
+					move_uploaded_file($tmp_name, $location."sports-g.jpg");
 				}
 			}
 		}	
@@ -275,7 +275,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."cult-b-".$filename);
+					move_uploaded_file($tmp_name, $location."cult-b.jpg");
 				}
 			}
 		}	
@@ -322,7 +322,7 @@
 				if(!empty($name))
 				{
 					$location = 'Uploads/';
-					move_uploaded_file($tmp_name, $location."cult-g-".$filename);
+					move_uploaded_file($tmp_name, $location."cult-g.jpg");
 				}
 			}
 		}	
@@ -362,7 +362,7 @@
 				Number:<input type="text" name="sports-b-no">
 				ID:<input type="text" name="sports-b-id">
 				Select image to upload:
-    				<input type="file" name="sorts-b-image" >
+    				<input type="file" name="sports-b-image" >
 	
 			<h4>Girls' Sports Sceretary Details<h4>
 				Name:<input type="text" name="sports-g-name">
