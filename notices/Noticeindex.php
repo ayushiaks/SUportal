@@ -6,7 +6,7 @@ include("database.php");
 $sql="SELECT * FROM fquestions ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
  
-$result=mysql_query($sql);
+$result=mysqli_query($con,$sql);
 ?>
  
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
@@ -21,7 +21,7 @@ $result=mysql_query($sql);
 <?php
  
 // Start looping table row
-while($rows = mysql_fetch_array($result)){
+while($rows = mysqli_fetch_array($result)){
 ?>
 <tr>
 	<td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
@@ -33,7 +33,7 @@ while($rows = mysql_fetch_array($result)){
 <?php
 // Exit looping and close connection 
 }
-mysql_close();
+mysqli_close($con);
 ?>
  <!-- create new topic -->
 <tr>
