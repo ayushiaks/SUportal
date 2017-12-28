@@ -47,7 +47,9 @@ CREATE TABLE `fquestions` (
   `detail` longtext NOT NULL,
   `email` varchar(65) NOT NULL,
   `datetime` varchar(65) NOT NULL,
-  `view` int(4) NOT NULL
+  `view` int(4) NOT NULL,
+  `name` varchar(65) NOT NULL,
+  `comments` int(5) NOT NUll
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,20 +58,6 @@ CREATE TABLE `fquestions` (
 -- Table structure for table `newtopic`
 --
 
-CREATE TABLE `newtopic` (
-  `username` varchar(65) NOT NULL,
-  `password` varchar(65) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `fanswer`
---
-ALTER TABLE `fanswer`
-  ADD PRIMARY KEY (`question_id`);
 
 --
 -- Indexes for table `fquestions`
@@ -78,20 +66,6 @@ ALTER TABLE `fquestions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `newtopic`
---
-ALTER TABLE `newtopic`
-  ADD PRIMARY KEY (`username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `fanswer`
---
-ALTER TABLE `fanswer`
-  MODIFY `question_id` int(4) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `fquestions`
 --

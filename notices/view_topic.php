@@ -72,25 +72,9 @@ while($rows=mysqli_fetch_array($result2, MYSQLI_ASSOC)){
 </tr>
 </table><br>
  
+
 <?php
 }
- 
-$sql3="SELECT view FROM $tbl_name WHERE id='$id'";
-$result3=mysqli_query($con,$sql3);
-$rows=mysqli_fetch_array($result3, MYSQLI_ASSOC);
-$view=$rows['view'];
- 
-// if have no counter value set counter = 1
-if(empty($view)){
-$view=1;
-$sql4="INSERT INTO $tbl_name(view) VALUES('$view') WHERE id='$id'";
-$result4=mysqli_query($con,$sql4);
-}
- 
-// count more value
-$addview=$view+1;
-$sql5="update $tbl_name set view='$addview' WHERE id='$id'";
-$result5=mysqli_query($con,$sql5);
 mysqli_close($con);
 ?>
  
