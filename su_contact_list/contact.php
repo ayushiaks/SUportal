@@ -2,7 +2,7 @@
 include "replace.php";
 ?>
 <html>
-<<<<<<< HEAD
+
 	<head>	
 	</head>
 	<body>
@@ -18,7 +18,7 @@ include "replace.php";
 			</ul>
 	</body>
 </html>
-=======
+
 <head>
 	<link rel="stylesheet" href="../css/style.css" />
 </head>
@@ -41,4 +41,3 @@ include "replace.php";
 	</div>
 </body>
 </html>
->>>>>>> 0bd294140870efc8210f45796a1db355161fccb2
