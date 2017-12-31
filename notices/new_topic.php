@@ -26,7 +26,7 @@
 						<td valign="top">:</td>
 						<td><textarea name="detail" id="detail" cols="50" rows="3"></textarea></td>
 					</tr>
-					<tr>
+					<!--<tr>
 						<td>Name</td>
 						<td>:</td>
 						<td><input name="name" type="text" id="name" size="50" /></td>
@@ -35,7 +35,7 @@
 						<td>Email</td>
 						<td>:</td>
 						<td><input name="email" type="text" id="email" size="50" /></td>
-					</tr>
+					</tr>-->
 					<tr>
 						
 						<td><input type="submit" name="submit" value="submit"/>

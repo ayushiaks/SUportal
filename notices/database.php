@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","myforum");
+$con = mysqli_connect("localhost","root","2016587","myforum");
 
 // Check connection
 if (mysqli_connect_errno())

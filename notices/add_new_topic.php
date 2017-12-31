@@ -9,7 +9,7 @@
 
 	echo $datetime;
 	// insert into db
-	$sql="INSERT INTO fquestions (topic, detail, name, email, datetime) VALUES ('$topic', '$detail', '$name', '$email', '$datetime')";
+	$sql="INSERT INTO fquestions (topic, detail, datetime) VALUES ('$topic', '$detail', '$datetime')";
 	$result=mysqli_query($con, $sql);
  
 	if($result){

@@ -20,9 +20,9 @@ $rows=mysqli_fetch_array($result, MYSQLI_ASSOC);
 <td bgcolor="#F8F7F1"><?php echo $rows['detail']; ?></td>
 </tr>
  
-<tr>
+<!--<tr>
 <td bgcolor="#F8F7F1"><strong>By :</strong> <?php echo $rows['name']; ?> <strong>Email : </strong><?php echo $rows['email'];?></td>
-</tr>
+</tr>-->
  
 <tr>
 <td bgcolor="#F8F7F1"><strong>Date/time : </strong><?php echo $rows['datetime']; ?></td>
