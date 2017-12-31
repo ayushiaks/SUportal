@@ -7,7 +7,7 @@
  *  license         - GNU General Public License version 2 or later
 */
 // REQUIREMENTS - PHP v5.3 or later
-// Note: The PHP client library requires that PHP has curl extensions configured. 
+// Note: The PHP client library requires that PHP has curl extensions configured.
 /*
  * DEFINITIONS
  *
@@ -20,7 +20,7 @@ const CLIENT_ID = '857163472597-2orvmu9sh01qvfadeqg8lb18mkftc839.apps.googleuser
 const CLIENT_SECRET = 'BxP5-5k_RuAF7sFFFiALctud';
 const REDIRECT_URI = 'http://localhost/SUportal/';
 session_start();
-/* 
+/*
  * INITIALIZATION
  *
  * Create a google client object
@@ -41,15 +41,15 @@ $plus = new Google_Service_Plus($client);
  * B. Authentication and Access token
  * C. Retrive Data
  */
-/* 
+/*
  * A. PRE-CHECK FOR LOGOUT
- * 
- * Unset the session variable in order to logout if already logged in    
+ *
+ * Unset the session variable in order to logout if already logged in
  */
 if (isset($_REQUEST['logout'])) {
    session_unset();
 }
-/* 
+/*
  * B. AUTHORIZATION AND ACCESS TOKEN
  *
  * If the request is a return url from the google server then
@@ -63,10 +63,10 @@ if (isset($_GET['code'])) {
   $redirect = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
   header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
 }
-/* 
+/*
  * C. RETRIVE DATA
- * 
- * If access token if available in session 
+ *
+ * If access token if available in session
  * load it to the client object and access the required profile data
  */
 if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
@@ -80,12 +80,13 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   $cover_image_url = $me['cover']['coverPhoto']['url'];
   $profile_url = $me['url'];
 } else {
-  // get the login url   
+  // get the login url
   $authUrl = $client->createAuthUrl();
 }
 ?>
 
 <!-- HTML CODE with Embeded PHP-->
+<link rel="stylesheet" href="../css/style.css" />
 <div>
     <?php
     /*
@@ -93,7 +94,9 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
-        echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
+        echo "<div id=\"lgn-con\">
+            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a>
+        </div>";
     } else {
         /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
