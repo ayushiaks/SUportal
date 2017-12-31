@@ -89,7 +89,7 @@ if(isset($_POST['name']) &&
 			<p>
 				Please fill the following form to reach out to us.
 			</p>
-			<div class="formmm"
+			<div class="formmm">
 			<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
 				<label>Name :</label> <input type="text" name="name"><br>
 				<label>ID No. :</label> <input type="text" name="id"><br>

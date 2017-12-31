@@ -2,15 +2,14 @@
 <html>
 <head>
 	<title>
-		
-		
+		Create New Notice
 	</title>
+	<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<!-- create new topic -->
-	<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#cccccc">
-	<tr> 
+	<div id="wrapper" class="form-con">
 		<form id="form1" name="form1" method="post" action="add_new_topic.php">
+<<<<<<< HEAD
 			<td>
 				<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#ffffff">
 					<tr>
@@ -43,13 +42,16 @@
 					</tr>
 				</table>
 			</td>
+=======
+			<label>Name</label><input name="name" type="text" id="name" size="50" /><br>
+			<label>Email</label><input name="email" type="text" id="email" size="50" /><br>
+			<label>Topic</label><input name="topic" type="text" id="topic" /><br>
+			<label>Detail</label><textarea name="detail" id="detail" cols="50" rows="3"></textarea><br>
+			<input class="submit" type="submit" name="submit" value="Submit"/><br>
+			<input class="submit" type="reset" name="submit2" value="Reset"/>
+>>>>>>> 4480d26fa8c851e7ce6aab2e2d944724fbca07ba
 		</form>
-	</tr>
-</table>
+	</div>
+
 </body>
 </html>
-
-
-
-
-
