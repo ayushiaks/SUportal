@@ -44,7 +44,7 @@ CREATE TABLE `fanswer` (
 CREATE TABLE `fquestions` (
   `id` int(4) NOT NULL,
   `topic` varchar(255) NOT NULL,
-  `detail` longtext NOT NULL,
+  `detail` text NOT NULL,
   `email` varchar(65) NOT NULL,
   `datetime` varchar(65) NOT NULL,
   `view` int(4) NOT NULL,

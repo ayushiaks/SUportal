@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+.wrapper{
+	display:flex;
+	flex-direction: column;
+}
+a:hover{
+	font-weight:bold;
+	color:black;
+	cursor:default;
+}
+#table{
+	border-radius:5px;
+	display:flex;
+	justify-content:space-around;
+
+	width:100vw;
+}
+#button{
+	padding:10px;
+	border:1px solid black;
+	border-radius:5px;
+}
+td{
+	padding:5px;
+}
