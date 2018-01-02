@@ -47,6 +47,7 @@ p{
 #a_comment{
 	flex-grow:3;
 	background-color: white;
+	padding:0;
 }
 #comments{
 	padding:1%;

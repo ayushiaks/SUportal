@@ -30,9 +30,9 @@ $rows=mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$result2=mysqli_query($con, $sql2);
 	while($rows=mysqli_fetch_array($result2, MYSQLI_ASSOC)){
 	?>
-	
+	<p style="font-size:20px; margin-top:3%">Comments :</p>
 	<div class="answers">
-		<div id="a_comment"><?php echo $rows['a_name']; ?> : <?php echo $rows['a_answer']; ?></div>
+		<div id="a_comment"><strong style="background-color: white;"><?php echo $rows['a_name']; ?></strong> : <?php echo $rows['a_answer']; ?></div>
 		<div id="a_email"><?php echo $rows['a_email']; ?> &nbsp;&nbsp;<br> <?php echo $rows['a_datetime']; ?> </div>
 	</div>	
 
