@@ -68,8 +68,8 @@ if(isset($_POST['name']) &&
 				Phone Number : <input type="text" name="phno"><br>
 				Room Number : <input type="text" name="rmno"><br>
 				Complaint Against : <input type="text" name="compon"><br>
-				Complaint :<br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
-				<input class="fomr" type="submit" name="submit" value="Submit">	
+				Complaint :<br> <textarea id="message" name="message" placeholder="Type Your Complaint Here"></textarea>
+				<div id="submit"><input class="fomr" type="submit" name="submit" value="Submit"></div>	
 				<p><?php echo $error1.$error2.$msg; ?></p>
 			</form>
 		</div>	

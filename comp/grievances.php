@@ -98,7 +98,7 @@ if(isset($_POST['name']) &&
 					<div class="choice"><input type="radio" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others (Please Specify)</label><br></div>
 					<input type="text" name="gr_others" id="gr_others"><br>
 				Grievance :<br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
-				<input class="fomr" type="submit" name="submit" value="Submit">	
+				<div id="submit"><input class="fomr" type="submit" name="submit" value="Submit"></div>	
 				<p><?php echo $error1.$error2.$msg; ?></p>
 			</form>
 		</div>	

@@ -14,10 +14,9 @@ $result=mysqli_query($con, $sql);
 	<div class="wrapper">
 		<table id="table" width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="white">
 			<tr>
-				<td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
-				<td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-				<td width="53%" align="center" bgcolor="#E6E6E6"><strong>Details</strong></td>
-				<td width="13%" align="center" bgcolor="#E6E6E6"><strong>Date/Time</strong></td>
+				<th width="15%" align="center"><strong><p class="header">Notice</p></strong></th>
+				<th width="53%" align="center"><strong><p class="header">Details</p></strong></th>
+				<th width="13%" align="center"><strong><p class="header">Date/Time</p></strong></th>
 			</tr>
 		<?php
 		 
@@ -25,10 +24,9 @@ $result=mysqli_query($con, $sql);
 		while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		?>
 			<tr>
-				<td bgcolor="#FFFFFF"><?php echo $rows['id']; ?></td>
-				<td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a><BR></td>
-				<td bgcolor="#FFFFFF"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['detail']; ?></a><BR></td>
-				<td align="center" bgcolor="#FFFFFF"><?php echo $rows['datetime']; ?></td>
+				<td align="center"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p style="font-weight:bold"><?php echo $rows['topic']; ?></p></a><BR></td>
+				<td align="left"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p><?php echo $rows['detail']; ?></p></a><BR></td>
+				<td align="center" bgcolor="#FFFFFF"><p><?php echo $rows['datetime']; ?></p></td>
 			</tr>
 		<?php
 		// Exit looping and close connection 
@@ -37,7 +35,7 @@ $result=mysqli_query($con, $sql);
 		?>
 
 		</table>
-		<div align="center"><a id="button" href="new_topic.php"><strong>Create New Notice</strong> </a></div>
+		<div align="center"><a id="button" href="new_topic.php">Create New Notice</a></div>
 	</div>	
 </body>
  <!-- create new topic -->
