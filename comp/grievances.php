@@ -66,6 +66,13 @@ if(isset($_POST['name']) &&
 
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    	<link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<meta charset="utf-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
@@ -84,23 +91,40 @@ if(isset($_POST['name']) &&
 		</script>
 		<link rel="stylesheet" href="../css/grievances.css" />
 	</head>
-	<body>
-		<div class="wrapper">	
-			<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
-				Name : <input type="text" name="name"><br>
-				ID No. : <input type="text" name="id"><br>
-				Bits Email ID : <input type="text" name="email"><br>
-				Phone Number : <input type="text" name="phno"><br>
-				Room Number : <input type="text" name="rmno"><br>
-				Grievance On :<br>  
-					<div class="choice"><input type="radio" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div>
-					<div class="choice"><input type="radio" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br></div>
-					<div class="choice"><input type="radio" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others (Please Specify)</label><br></div>
-					<input type="text" name="gr_others" id="gr_others"><br>
-				Grievance :<br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
-				<div id="submit"><input class="fomr" type="submit" name="submit" value="Submit"></div>	
-				<p><?php echo $error1.$error2.$msg; ?></p>
+	<body class="#b3e5fc light-blue lighten-4">
+		<div class="row">	
+			<form class="form" action="grievances.php" method="POST" enctype="multipart/form-data">
+				<h4>Greivance Form</h4>
+				<div class="row">
+					<div class="input-field col s10">
+						<input data-error="wrong" data-success="right" placeholder="Name" type="hidden" name="name">
+					</div>
+					<div class="input-field col s12">	
+						<input data-error="wrong" data-success="right" placeholder="email" type="hidden" name="email">
+					</div>
+					<div class="input-field col s12">	
+						<input data-error="wrong" data-success="right" placeholder="ID Number" type="text" name="id">
+					</div>
+					<div class="input-field col s12">	
+						<input data-error="wrong" data-success="right" placeholder="Phone Number" type="text" name="phno">
+					</div>	
+					<div class="input-field col s12">	
+						<input data-error="wrong" data-success="right" placeholder="Room Number" type="text" name="rmno">
+					</div>
+					<div class="input-field col s12" style="padding-left:0; font-size:17.5px;">Grievance On :</div>  
+							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div></p>
+							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br></div></p>
+							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others</label><br></div></p>
+							<input type="text" placeholder="Please Specify" name="gr_others" id="gr_others"><br>
+					
+					<div class="input-field col s12">		
+						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
+					</div>
+						<div><input class="z-depth-4" id="button" type="submit" name="submit" value="Submit"></div>		
+						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
 			</form>
-		</div>	
+		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>	
 	</body>
 </html>

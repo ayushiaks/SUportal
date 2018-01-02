@@ -8,15 +8,21 @@ $sql="SELECT * FROM fquestions ORDER BY id DESC";
 $result=mysqli_query($con, $sql);
 ?>
 <head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="../css/notices.css" />
 </head>
-<body>
+<body class=" #b3e5fc light-blue lighten-4">
 	<div class="wrapper">
-		<table id="table" width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="white">
+		<table class="highlight" id="table" align="center" bgcolor="white">
 			<tr>
-				<th width="15%" align="center"><strong><p class="header">Notice</p></strong></th>
-				<th width="53%" align="center"><strong><p class="header">Details</p></strong></th>
-				<th width="13%" align="center"><strong><p class="header">Date/Time</p></strong></th>
+				<td width="15%" align="center"><p style="text-align:center;" class="header">Notice</p></td>
+				<td width="53%" align="center"><p class="header">Details</p></td>
+				<td width="13%" align="center"><p class="header">Date/Time</p></td>
 			</tr>
 		<?php
 		 
@@ -24,9 +30,9 @@ $result=mysqli_query($con, $sql);
 		while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		?>
 			<tr>
-				<td align="center"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p style="font-weight:bold"><?php echo $rows['topic']; ?></p></a><BR></td>
-				<td align="left"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p><?php echo $rows['detail']; ?></p></a><BR></td>
-				<td align="center" bgcolor="#FFFFFF"><p><?php echo $rows['datetime']; ?></p></td>
+				<td ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p style="text-align:center;"><?php echo $rows['topic']; ?></p></a></td>
+				<td><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p><?php echo $rows['detail']; ?></p></a></td>
+				<td  bgcolor="#FFFFFF"><p><?php echo $rows['datetime']; ?></p></td>
 			</tr>
 		<?php
 		// Exit looping and close connection 
@@ -35,7 +41,10 @@ $result=mysqli_query($con, $sql);
 		?>
 
 		</table>
-		<div align="center"><a id="button" href="new_topic.php">Create New Notice</a></div>
+		<div align="center" style="font-weight:bold;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a></div>
 	</div>	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
  <!-- create new topic -->

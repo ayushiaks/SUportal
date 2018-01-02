@@ -56,22 +56,48 @@ if(isset($_POST['name']) &&
 
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    	<link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="../css/complaints.css" />
 	</head>
-	<body>
-		<div class="wrapper">
-			<form class="form" action="comp.php" method="POST" enctype="multipart/form-data">
-				NAME : <input type="text" name="name"><br>
-				ID No. : <input type="text" name="id"><br>
-				Bits Email ID : <input type="text" name="email"><br>
-				Phone Number : <input type="text" name="phno"><br>
-				Room Number : <input type="text" name="rmno"><br>
-				Complaint Against : <input type="text" name="compon"><br>
-				Complaint :<br> <textarea id="message" name="message" placeholder="Type Your Complaint Here"></textarea>
-				<div id="submit"><input class="fomr" type="submit" name="submit" value="Submit"></div>	
-				<p><?php echo $error1.$error2.$msg; ?></p>
+	<body class="#b3e5fc light-blue lighten-4">
+		<div class="row">
+			<form id="form" class="col s12" action="comp.php" method="POST" enctype="multipart/form-data">
+			<h4>Register Complaint</h4>
+				<div class="div">
+					<div class="input-field col s12">
+						<input class="input-field col s11" placeholder="Name" type="hidden" name="name">
+					</div>
+					<div class="input-field col s12">	
+						<input placeholder="ID" type="text" name="id">
+					</div>
+					<div class="input-field col s12">	
+						<input placeholder="Email" type="hidden" name="email">
+					</div>
+					<div class="input-field col s12">	
+						<input placeholder="Phone Number" type="text" name="phno">
+					</div>
+					<div class="input-field col s12">	
+						<input placeholder="Room Number" type="text" name="rmno">
+					</div>
+					<div class="input-field col s12">
+						<input placeholder="Complaint On" type="text" name="compon">
+					</div>
+					<div class="input-field col s12">	
+						<textarea class="materialize-textarea" name="message" placeholder="Type Your Complaint Here"></textarea>
+					</div>	
+						<div ><input class="z-depth-4" id="button" type="submit" name="submit" value="Submit"></div>	
+						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
+				</div>		
 			</form>
 		</div>	
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 	</body>
 </html>

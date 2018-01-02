@@ -1,50 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 *{
 	margin:0;
 	padding:0;
-	font-size:17px;
-	background-color:rgb(135,206,250);
-	font-family:"Raleway";
 }
-.wrapper{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-}
-.form{
-	display:flex;
-	flex-direction: column;
-	justify-content:space-around;
-	height:75vh;
-	margin-top:2.5%;
-	padding:1.5%;
-	border:3px solid rgb(0,191,255);
-	border-radius:5px;
+#form{
+	border:1px solid black;
+	margin:2.5%;
+	padding:2.5%;
+	width:95vw;
 	background-color: white;
 }
 
- input, textarea, label {
-	background-color: white;
-}
-textarea{
-	overflow:auto;
-	height:20vw;
-	width:20vw;
-	resize:none;
-}
-input[type="submit"]{
-	padding:10%;
-	box-shadow: 5px 2.5px gray;
-	margin-top:10%;
-	margin-bottom:0;
-	border:1px solid gray;
-}
-input[type="submit"]:hover{
-	box-shadow: none;
-	border:1px solid gray;
+#button{
+	padding:10px;
+	border:1px solid black;
 	border-radius:5px;
-}
-#submit{
-	background-color: white;
-	align-self: center;
+	background-color:white;
 }
