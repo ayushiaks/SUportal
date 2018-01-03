@@ -7,11 +7,20 @@
 body {
     background-color: #272727;
 }
+a {
+    color: white;
+}
 a:visited {
     text-decoration: none;
+    color: white;
 }
 a:link {
     text-decoration: none;
+}
+.home-btn {
+    position: absolute;
+    top: 25px;
+    left: 50px;
 }
 #container {
     display: flex;
@@ -29,6 +38,19 @@ a:link {
     list-style: none;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
+}
+.sub-menu {
+    display: none;
+    text-decoration: none;
+}
+.parent-menu:hover > .sub-menu {
+    display: block;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 7.5px 0 7.5px 7.5px;
+    position: absolute;
+    top: 60px;
 }
 #nav-items > li {
     padding: 20px;
@@ -47,27 +69,25 @@ a:link {
     flex-direction: row;
 }
 .more {
-    visibility: hidden;
     padding: 3px;
     border: 0.5px black solid;
     border-radius: 2px;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 .category {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: calc(100vw / 3);
+    width: 25vw;
     height: calc(100vh - 67.5px);
     transition: 0.5s ease;
+    color: black;
 }
-.category:hover {
-    width: 80vw;
-}
-.category:hover > .more {
-    visibility: visible;
+#tech {
+    /* background-image: url("../images/tech.jpg"); */
+    background-size: cover;
 }
 #wrapper {
     color: white;
