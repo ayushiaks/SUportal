@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS `grievance_records` (
   `rmno` varchar(40),
   `gr` varchar(40),
   `gr_others` varchar(40),
+  `gr_to` varchar(40),
+  `gr_to_others` varchar(40),
   `message` text,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

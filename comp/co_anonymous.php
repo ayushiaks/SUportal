@@ -21,11 +21,7 @@ if(isset($_POST['name']) &&
 	$message = $_POST['message'];
 	$compon = $_POST['compon'];
 
-	if(!empty($name) &&
-	   !empty($id) &&
-	   !empty($email) &&
-	   !empty($phno)&&
-	   !empty($rmno)&&
+	if(
 	   !empty($compon)&&
 	   !empty($message)) 	
 	{
@@ -65,25 +61,25 @@ if(isset($_POST['name']) &&
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="../css/complaints.css" />
 	</head>
-	<body class="#7e57c2 deep-purple lighten-1">
+	<body class="#4db6ac teal lighten-2">
 		<div class="row">
-			<form id="form" class="col s12  #ede7f6 deep-purple lighten-5" action="comp.php" method="POST" enctype="multipart/form-data">
+			<form id="form" class="col s12 #e0f2f1 teal lighten-5" action="co_anonymous.php" method="POST" enctype="multipart/form-data">
 			<h4>Register Complaint</h4>
 				<div class="div">
 					<div class="input-field col s12">
 						<input placeholder="Name" type="hidden" name="name">
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="ID" type="text" name="id">
+						<input placeholder="ID" type="hidden" name="id">
 					</div>
 					<div class="input-field col s12">	
 						<input placeholder="Email" type="hidden" name="email">
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Phone Number" type="text" name="phno">
+						<input placeholder="Phone Number" type="hidden" name="phno">
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Room Number" type="text" name="rmno">
+						<input placeholder="Room Number" type="hidden" name="rmno">
 					</div>
 					<div class="input-field col s12">
 						<input placeholder="Complaint On" type="text" name="compon">
@@ -91,7 +87,7 @@ if(isset($_POST['name']) &&
 					<div class="input-field col s12">	
 						<textarea class="materialize-textarea" name="message" placeholder="Type Your Complaint Here"></textarea>
 					</div>	
-						<div ><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a  style="margin-left:35%; font-size:20px;" href="co_anonymous.php" class="z-depth-4 button">Fill Anonymously</a></div>	
+						<div ><input class="z-depth-4 button" type="submit" name="submit" value="Submit"></div>	
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
 				</div>		
 			</form>

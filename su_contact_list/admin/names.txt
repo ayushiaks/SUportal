@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-donald
-=======
 Abhinav
->>>>>>> c1d1964d809661c4f091cf7696309f4a579c18f2
 Aditya Iyer
 Sharath Golluri
 Im sorry,idk

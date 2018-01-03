@@ -29,10 +29,7 @@ if(isset($_POST['name']) &&
 
 
 	if(!empty($name) &&
-	   !empty($id) &&
 	   !empty($email) &&
-	   !empty($phno)&&
-	   !empty($rmno)&&
 	   !empty($gr)&&
 	   !empty($gr_to)&&
 	   !empty($message)) 	
@@ -108,25 +105,25 @@ if(isset($_POST['name']) &&
 		</script>
 		<link rel="stylesheet" href="../css/grievances.css" />
 	</head>
-	<body class="#7e57c2 deep-purple lighten-1">
+	<body class="#4db6ac teal lighten-2">
 		<div class="row">	
-			<form class="form #ede7f6 deep-purple lighten-5" action="grievances.php" method="POST" enctype="multipart/form-data">
-				<h4>Greivance Form </h4>
+			<form class="form #e0f2f1 teal lighten-5" action="gr_anonymus.php" method="POST" enctype="multipart/form-data">
+				<h4>Greivance Form (Anonymous)</h4>
 				<div class="div">
 					<div class="input-field col s12">
-						<input placeholder="Name" type="text" name="name" />
+						<input placeholder="Name" type="hidden" name="name" />
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Email" type="text" name="email">
+						<input placeholder="email" type="hidden" name="email">
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="ID Number" type="text" name="id">
+						<input placeholder="ID Number" type="hidden" name="id">
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Phone Number" type="text" name="phno">
+						<input placeholder="Phone Number" type="hidden" name="phno">
 					</div>	
 					<div class="input-field col s12">	
-						<input placeholder="Room Number" type="text" name="rmno">
+						<input placeholder="Room Number" type="hidden" name="rmno">
 					</div>
 					<div class="input-field col s12" style="padding:0; font-size:17.5px;">Grievance On :  </div>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div></p>
@@ -146,7 +143,7 @@ if(isset($_POST['name']) &&
 					<div class="input-field col s12">		
 						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
 					</div>
-						<div><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a style="margin-left:35%; font-size:20px;" href="gr_anonymus.php" class="z-depth-4 button">Fill Anonymously</a></div>	
+						<div><input class="z-depth-4 button" type="submit" name="submit" value="Submit"></div>		
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
 				</div>		
 			</form>
