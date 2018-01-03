@@ -1,5 +1,6 @@
 <?php
-
+include("../download/home.php");
+include("../index.php");
 $error1 ="";
 $error2 = "";
 $msg = "";
@@ -91,9 +92,9 @@ if(isset($_POST['name']) &&
 			</p>
 			<div class="formmm">
 			<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
-				<label>Name :</label> <input type="text" name="name"><br>
-				<label>ID No. :</label> <input type="text" name="id"><br>
-				<label>BITS Email ID :</label> <input type="text" name="email"><br>
+				<label>Name :</label> <input type="text" name="name" placeholder="<?php echo $name;?>"><br>
+				<label>ID No. :</label> <input type="text" name="id" ><br>
+				<label>BITS Email ID :</label> <input type="text" name="email" placeholder="<?php echo $email;?>"><br>
 				<label>Phone Number :</label> <input type="text" name="phno"><br>
 				<label>Room Number :</label> <input type="text" name="rmno"><br>
 				<label>Grievance ON :</label><br>
