@@ -1,6 +1,6 @@
 <?php
 include("../download/home.php");
-include("../index.php");
+include("../common.php");
 $error1 ="";
 $error2 = "";
 $msg = "";

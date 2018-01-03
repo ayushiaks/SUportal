@@ -1,5 +1,6 @@
 <?php
 include "replace.php";
+include("../common.php");
 ?>
 <html>
 <<<<<<< HEAD

@@ -10,10 +10,10 @@
 	<div id="wrapper" class="form-con">
 		<form id="form1" name="form1" method="post" action="add_new_club_topic.php">
 
-			<label>Event Name</label><input name="event name" type="text" id="name" size="50" /><br>
-			<label>Poster</label><input name="poster" type="file" id="email" size="50" /><br>
-			<label>Location</label><input name="location" type="text" id="topic" /><br>
-			<label>Detail</label><input name="detail" id="detail" cols="50" rows="3">
+			<label>Event Name</label><input name="event_name" type="text" id="name" size="50" required /><br>
+			<label>Poster</label><input name="image" type="file" id="email" size="50" required /><br>
+			<label>Location</label><input name="location" type="text" id="topic" required  /><br>
+			<label>Detail</label><input name="detail" id="detail" cols="50" rows="3" required >
 				<?php if(isset($_FILES['image'])){
       $errors= array();
       $file_name = $_FILES['image']['name'];
@@ -42,6 +42,10 @@
 ?>
 
 			</input><br>
+			<label>Notice Type</label><br>
+					<input type="radio" id="notice_1" name="type" value="EC" required><label for="notice_1">Technical</label><br>
+					<input type="radio" id="notice_2" name="type" value="CRC" required><label for="notice_2">Cultural</label><br>
+					<input type="radio" id="notice_3" name="type" value="Other" required><label for="notice_3">Sports</label><br><br>
 			<input class="submit" type="submit" name="submit" value="Submit"/><br>
 			<input class="submit" type="reset" name="submit2" value="Reset"/>
 

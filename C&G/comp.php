@@ -1,5 +1,5 @@
 <?php
-
+include("../common.php");
 $error1 ="";
 $error2 = "";
 $msg = "";
