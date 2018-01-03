@@ -32,7 +32,7 @@ $client = new Google_Client();
 $client->setClientId(CLIENT_ID);
 $client->setClientSecret(CLIENT_SECRET);
 $client->setRedirectUri(REDIRECT_URI);
-$client->setScopes('email');
+$client->setScopes(array('https://www.googleapis.com/auth/userinfo.email','https://www.googleapis.com/auth/userinfo.profile'));
 $plus = new Google_Service_Plus($client);
 /*
  * PROCESS
@@ -83,6 +83,9 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   // get the login url
   $authUrl = $client->createAuthUrl();
 }
+
+//if(!isset($_SESSION['access_token'])) {
+ // header('Location: index.php');
 ?>
 
 <!-- HTML CODE with Embeded PHP-->
@@ -106,8 +109,10 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         print "Url: {$profile_url} <br><br>";
         echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
 
-        if(strpos($email, '@hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html')        ;}
+        if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
+        header('Location: land.html') ;  
+        
+        }
         else{
           echo"Login failed. Login with Bitsmail.";
         }
