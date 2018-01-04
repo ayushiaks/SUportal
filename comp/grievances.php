@@ -12,6 +12,8 @@ if(isset($_POST['name']) &&
 	isset($_POST['rmno'])&&
 	isset($_POST['gr'])&&
 	isset($_POST['gr_others'])&&
+	isset($_POST['gr_to'])&&
+	isset($_POST['gr_to_others'])&&
 	isset($_POST['message']))
 {
 	$name = $_POST['name'];
@@ -21,6 +23,8 @@ if(isset($_POST['name']) &&
 	$rmno = $_POST['rmno'];
 	$gr = $_POST['gr'];
 	$gr_others = $_POST['gr_others'];
+	$gr_to = $_POST['gr_to'];
+	$gr_to_others = $_POST['gr_to_others'];
 	$message = $_POST['message'];
 
 
@@ -30,9 +34,10 @@ if(isset($_POST['name']) &&
 	   !empty($phno)&&
 	   !empty($rmno)&&
 	   !empty($gr)&&
+	   !empty($gr_to)&&
 	   !empty($message)) 	
 	{
-		if($gr == 'Other' && empty($gr_others))
+		if(($gr == 'Other' && empty($gr_others)) || ($gr_to == 'Other' && empty($gr_to_others)))
 		{
 			$error1 = "Please fill in the details of others";
 		}
@@ -45,6 +50,8 @@ if(isset($_POST['name']) &&
 												        '".mysqli_real_escape_string($var,$rmno)."',
 												        '".mysqli_real_escape_string($var,$gr)."',
 												        '".mysqli_real_escape_string($var,$gr_others)."',
+												        '".mysqli_real_escape_string($var,$gr_to)."',
+												        '".mysqli_real_escape_string($var,$gr_to_others)."',
 												        '".mysqli_real_escape_string($var,$message)."')";
 			
 			if($query_run = mysqli_query($var,$query))
@@ -86,42 +93,62 @@ if(isset($_POST['name']) &&
 					} else {
 					    $("#gr_others").hide();
 					}
+				});
+				$("#gr_to_others").hide();
+
+				$( "#gr_to_choice_3" ).change(function() {
+	  				var val = $("#gr_to_choice_3").val();
+					if(val=="Other"){
+					    $("#gr_to_others").show();
+					} else {
+					    $("#gr_to_others").hide();
+					}
 					});
 			});
 		</script>
 		<link rel="stylesheet" href="../css/grievances.css" />
 	</head>
-	<body class="#b3e5fc light-blue lighten-4">
+	<body>
 		<div class="row">	
-			<form class="form" action="grievances.php" method="POST" enctype="multipart/form-data">
-				<h4>Greivance Form</h4>
-				<div class="row">
-					<div class="input-field col s10">
-						<input data-error="wrong" data-success="right" placeholder="Name" type="hidden" name="name">
+			<form class="form #e3f2fd blue lighten-5 z-depth-3" action="grievances.php" method="POST" enctype="multipart/form-data">
+				<h4>Greivance Form </h4>
+				<div class="div">
+					<div class="input-field col s12">
+						<input placeholder="Name" type="text" name="name" />
 					</div>
 					<div class="input-field col s12">	
-						<input data-error="wrong" data-success="right" placeholder="email" type="hidden" name="email">
+						<input placeholder="Email" type="text" name="email">
 					</div>
 					<div class="input-field col s12">	
-						<input data-error="wrong" data-success="right" placeholder="ID Number" type="text" name="id">
+						<input placeholder="ID Number" type="text" name="id">
 					</div>
 					<div class="input-field col s12">	
-						<input data-error="wrong" data-success="right" placeholder="Phone Number" type="text" name="phno">
+						<input placeholder="Phone Number" type="text" name="phno">
 					</div>	
 					<div class="input-field col s12">	
-						<input data-error="wrong" data-success="right" placeholder="Room Number" type="text" name="rmno">
+						<input placeholder="Room Number" type="text" name="rmno">
 					</div>
-					<div class="input-field col s12" style="padding-left:0; font-size:17.5px;">Grievance On :</div>  
+					<div class="input-field col s12" style="padding:0; font-size:17.5px;">Grievance On :  </div>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div></p>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br></div></p>
+							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_4" name="gr" value="SU"><label for="gr_choice_4">SU</label><br></div></p>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others</label><br></div></p>
 							<input type="text" placeholder="Please Specify" name="gr_others" id="gr_others"><br>
+					
+					<div class="input-field col s12" style="padding-left:0; font-size:17.5px;">Submit Grievance to :</div>  
+							<p><div class="choice_to"><input type="radio" class="with-gap" id="gr_to_choice_1" name="gr_to" value="EC"><label for="gr_to_choice_1">EC</label><br></div></p>
+							<p><div class="choice_to"><input type="radio" class="with-gap" id="gr_to_choice_2" name="gr_to" value="CRC"><label for="gr_to_choice_2">CRC</label><br></div></p>
+							<p><div class="choice_to"><input type="radio" class="with-gap" id="gr_to_choice_4" name="gr_to" value="SU"><label for="gr_to_choice_4">SU</label><br></div></p>
+							<p><div class="choice_to"><input type="radio" class="with-gap" id="gr_to_choice_3" name="gr_to" value="Other"><label for="gr_to_choice_3">Others</label><br></div></p>
+							<input type="text" placeholder="Please Specify" name="gr_to_others" id="gr_to_others"><br>		
+					
 					
 					<div class="input-field col s12">		
 						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
 					</div>
-						<div><input class="z-depth-4" id="button" type="submit" name="submit" value="Submit"></div>		
+						<div><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a style="margin-left:35%; font-size:20px;" class="z-depth-4 button gr_anonymous">Fill Anonymously</a></div>	
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
+				</div>		
 			</form>
 		</div>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -27,8 +27,7 @@ $sql2="INSERT INTO fanswer(question_id, a_id, a_name, a_email, a_answer, a_datet
 $result2=mysqli_query($con,$sql2);
  
 if($result2){
-echo "Successful<BR>";
-echo "<a href='view_topic.php?id=".$id."'>View your answer</a>";
+header('Location: ' . $_SERVER['HTTP_REFERER']);
  
 // If added new answer, add value +1 in reply column 
 $tbl_name2="fquestions";

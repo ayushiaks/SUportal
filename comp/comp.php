@@ -65,13 +65,13 @@ if(isset($_POST['name']) &&
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="../css/complaints.css" />
 	</head>
-	<body class="#b3e5fc light-blue lighten-4">
+	<body class="#42a5f5">
 		<div class="row">
-			<form id="form" class="col s12" action="comp.php" method="POST" enctype="multipart/form-data">
+			<form id="form" class="col s12 #e3f2fd blue lighten-5 z-depth-3" action="comp.php" method="POST" enctype="multipart/form-data">
 			<h4>Register Complaint</h4>
 				<div class="div">
 					<div class="input-field col s12">
-						<input class="input-field col s11" placeholder="Name" type="hidden" name="name">
+						<input placeholder="Name" type="hidden" name="name">
 					</div>
 					<div class="input-field col s12">	
 						<input placeholder="ID" type="text" name="id">
@@ -91,7 +91,7 @@ if(isset($_POST['name']) &&
 					<div class="input-field col s12">	
 						<textarea class="materialize-textarea" name="message" placeholder="Type Your Complaint Here"></textarea>
 					</div>	
-						<div ><input class="z-depth-4" id="button" type="submit" name="submit" value="Submit"></div>	
+						<div ><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a  style="margin-left:35%; font-size:20px;" class="z-depth-4 button co_anonymous">Fill Anonymously</a></div>	
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
 				</div>		
 			</form>

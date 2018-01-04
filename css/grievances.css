@@ -3,15 +3,20 @@
 	padding:0;
 }
 .form{
-	border:1px solid black;
-	margin:2.5%;
 	padding:2.5%;
-	background-color:white;
-	width:95vw;
+	margin:5%;
 }
-#button{
+.button{
 	padding:10px;
 	border:1px solid black;
 	border-radius:5px;
 	background-color:white;
+}
+a:hover{
+	color:black;
+	cursor:default;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:  black;
+     opacity: 1 !important;
 }

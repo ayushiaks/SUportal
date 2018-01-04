@@ -3,7 +3,6 @@
 	padding:0;
 }
 #form{
-	border:1px solid black;
 	margin:2.5%;
 	width:95vw;
 	padding:1.5%;
@@ -15,4 +14,7 @@
 	border:1px solid black;
 	border-radius:5px;
 	background-color:white;
+}
+.upload{
+	margin:1%;
 }
