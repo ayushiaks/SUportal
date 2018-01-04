@@ -112,6 +112,8 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
         header('Location: land.html') ;  
         $_SESSION['email']=$email;
+        $_SESSION['name']=$name;
+
         
         
         }

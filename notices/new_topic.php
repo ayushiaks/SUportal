@@ -34,11 +34,11 @@
 				</div>
 				<div class="input-field col s12">	
 					<i class="material-icons">account_circle</i>
-					<input placeholder="Name" name="name" type="text" id="name" size="50" required  />
+					<input placeholder="Name" name="name" type="text" id="name" size="50" value="<?php echo $name;?>" required  />
 				</div>
 				<div class="input-field col s12">	
 					<i class="material-icons">email</i>
-					<input placeholder="Email" name="email" type="text" id="email" size="50"  required />
+					<input placeholder="Email" name="email" type="text" id="email" size="50"  value="<?php echo $email;?>" required />
 				</div>	
 				<div class="buttons">
 					<input class="button z-depth-4" type="submit" name="submit" value="submit"/>&nbsp;&nbsp;

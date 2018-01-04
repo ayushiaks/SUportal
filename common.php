@@ -6,6 +6,6 @@ if(!isset($_SESSION['access_token'])) {
 	exit();	
 }
 $email = $_SESSION['email'];
-
+$name = $_SESSION['name'];
 
 ?>

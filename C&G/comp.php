@@ -73,9 +73,9 @@ if(isset($_POST['name']) &&
 	<body>
 		<div id="ajax-con">
 			<form class="form" action="comp.php" method="POST" enctype="multipart/form-data">
-				NAME : <input type="text" name="name"><br>
+				NAME : <input type="text" name="name" value="<?php echo $name;?>"><br>
 				ID No. : <input type="text" name="id"><br>
-				Bits Email ID : <input type="text" name="email"><br>
+				Bits Email ID : <input type="text" name="email" value="<?php echo $email;?>"><br>
 				Phone Number : <input type="text" name="phno"><br>
 				Room Number : <input type="text" name="rmno"><br>
 					<input type="text" name="gr_others" id="gr_others"><br>

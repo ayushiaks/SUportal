@@ -49,12 +49,13 @@ INSERT INTO `admin` (`id`, `name`, `admin`, `email`) VALUES
 --
 
 CREATE TABLE `club` (
-  `id` int(4) NOT NULL,
+  `id` int(4) NOT NULL, 
   `event_name` varchar(65) NOT NULL,
   `detail` varchar(255) NOT NULL,
   `image` longblob NOT NULL,
   `location` varchar(65) NOT NULL,
-  `datetime` datetime NOT NULL
+  `datetime` datetime NOT NULL,
+  `type` varchar(65) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
