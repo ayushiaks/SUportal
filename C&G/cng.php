@@ -85,28 +85,29 @@ if(isset($_POST['name']) &&
 		<link rel="stylesheet" href="../css/style.css" />
 	</head>
 	<body>
-		<div id="wrapper" class="form-con">
-			<h2 id="cng-head">Contact and Grievances</h2>
-			<p>
-				Please fill the following form to reach out to us.
-			</p>
-			<div class="formmm">
-			<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
-				<label>Name :</label> <input type="text" name="name" placeholder="<?php echo $name;?>"><br>
-				<label>ID No. :</label> <input type="text" name="id" ><br>
-				<label>BITS Email ID :</label> <input type="text" name="email" placeholder="<?php echo $email;?>"><br>
-				<label>Phone Number :</label> <input type="text" name="phno"><br>
-				<label>Room Number :</label> <input type="text" name="rmno"><br>
-				<label>Grievance ON :</label><br>
-					<input type="radio" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br>
-					<input type="radio" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br>
-					<input type="radio" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others (Please Specify)</label><br>
-					<input type="text" name="gr_others" id="gr_others"><br>
-				<label>Grievance :</label><br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
-				<input class="fomr submit" type="submit" name="submit" value="Submit">
-				<p><?php echo $error1.$error2.$msg; ?></p>
-			</form>
+		<div id="ajax-con">
+			<div id="wrapper" class="form-con">
+				<h2 id="cng-head">Contact and Grievances</h2>
+				<p>
+					Please fill the following form to reach out to us.
+				</p>
+				<div class="formmm">
+				<form class="form" action="cng.php" method="POST" enctype="multipart/form-data">
+					<label>Name :</label> <input type="text" name="name" placeholder="<?php echo $name;?>"><br>
+					<label>ID No. :</label> <input type="text" name="id" ><br>
+					<label>BITS Email ID :</label> <input type="text" name="email" placeholder="<?php echo $email;?>"><br>
+					<label>Phone Number :</label> <input type="text" name="phno"><br>
+					<label>Room Number :</label> <input type="text" name="rmno"><br>
+					<label>Grievance ON :</label><br>
+						<input type="radio" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br>
+						<input type="radio" id="gr_choice_2" name="gr" value="CRC"><label for="gr_choice_2">CRC</label><br>
+						<input type="radio" id="gr_choice_3" name="gr" value="Other"><label for="gr_choice_3">Others (Please Specify)</label><br>
+						<input type="text" name="gr_others" id="gr_others"><br>
+					<label>Grievance :</label><br> <textarea id="message" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
+					<input class="fomr submit" type="submit" name="submit" value="Submit">
+					<p><?php echo $error1.$error2.$msg; ?></p>
+				</form>
+			</div>
 		</div>
-
 	</body>
 </html>

@@ -6,6 +6,7 @@
 }
 body {
     background-color: #272727;
+    overflow-x: hidden;
 }
 a {
     color: white;
@@ -16,11 +17,6 @@ a:visited {
 }
 a:link {
     text-decoration: none;
-}
-.home-btn {
-    position: absolute;
-    top: 25px;
-    left: 50px;
 }
 #container {
     display: flex;
@@ -67,6 +63,8 @@ a:link {
 #content {
     display: flex;
     flex-direction: row;
+    background: url('../images/bphc.jpg');
+    background-size: cover;
 }
 .more {
     padding: 3px;
@@ -157,4 +155,7 @@ input.submit {
     border: 0.5px solid white;
     padding: 15px;
     border-radius: 2px;
+}
+#home,#twoonetwo,#contact,#cng,#comp {
+    cursor: pointer;
 }
