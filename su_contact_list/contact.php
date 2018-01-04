@@ -1,5 +1,6 @@
 <?php
 include "replace.php";
+include("../common.php");
 ?>
 <html>
 <<<<<<< HEAD
@@ -8,6 +9,7 @@ include "replace.php";
 </head>
 <body>
 	<div id="wrapper">
+		<a class="home-btn" href="../land.html">Home</a>
 		<h2 id="con-head">Meet the Student Union</h2>
 		<ul id="su-list">
 			<div class="row">

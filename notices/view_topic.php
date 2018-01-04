@@ -98,7 +98,7 @@ while($rows=mysqli_fetch_array($result2, MYSQLI_ASSOC)){
 	<div class="line"></div>  
 >>>>>>> c1d1964d809661c4f091cf7696309f4a579c18f2
 
-	<p style="font-size:20px; margin-top:3%">Comments :</p>
+	<!--<p style="font-size:20px; margin-top:3%">Comments :</p>
 	<?php
 	 
 	$tbl_name2="fanswer"; // Switch to table "forum_answer"

@@ -2,7 +2,8 @@
 session_start();
 include("database.php");
 
-include("../common.php");
+//include("../index.php");
+
 
  
 $sql="SELECT * FROM fquestions ORDER BY id DESC";
