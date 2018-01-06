@@ -1,3 +1,6 @@
+<?php
+include("../common.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,16 +19,16 @@
 			<div class="row">
 				<h3>Create New Topic:</h3>
 				<div class="input-field col s12">
-					<input placeholder="Topic" name="topic" type="text" id="topic" size="50" />
+					<input placeholder="Topic" name="topic" type="text" id="topic" size="50" required/>
 				</div>
 				<div class="input-field col s12">	
-					<textarea placeholder="Details" id="textarea1" class="materialize-textarea" name="detail"></textarea>
+					<textarea placeholder="Details" id="textarea1" class="materialize-textarea" name="detail" required></textarea>
 				</div>
 				<div class="input-field col s12">	
-					<input placeholder="Name" name="name" type="text" id="name" size="50" />
+					<input  name="name" type="text" id="name" size="50" value="<?php echo $name;?>" required />
 				</div>
 				<div class="input-field col s12">	
-					<input placeholder="Email" name="email" type="text" id="email" size="50" />
+					<input name="email" type="text" id="email" size="50" value="<?php echo $email;?>" required/>
 				</div>
 				<div class="input-field col s12 file-field input-field">
 			        <div class="btn  upload">

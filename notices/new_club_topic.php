@@ -56,7 +56,7 @@ include("database.php");
 </head>
 <body>
 	<div id="wrapper" class="form-con">
-		<form id="form1" name="form1" method="post" action="new_club_topic.php">
+		<form id="form1" name="form1" method="post" action="add_new_club_topic.php">
 
 			<label>Event Name</label><input name="event_name" type="text" id="name" size="50" required /><br>
 			<label>Poster</label><input name="image" type="file" id="email" size="50" required /><br>

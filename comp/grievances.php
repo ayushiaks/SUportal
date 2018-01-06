@@ -1,5 +1,5 @@
 <?php
-
+include("../common.php");
 $error1 ="";
 $error2 = "";
 $msg = "";
@@ -114,19 +114,19 @@ if(isset($_POST['name']) &&
 				<h4>Greivance Form </h4>
 				<div class="div">
 					<div class="input-field col s12">
-						<input placeholder="Name" type="text" name="name" />
+						<input type="text" name="name" value="<?php echo $name;?>" required/>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Email" type="text" name="email">
+						<input type="text" name="email" value="<?php echo $email;?>" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="ID Number" type="text" name="id">
+						<input placeholder="ID Number" type="text" name="id" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Phone Number" type="text" name="phno">
+						<input placeholder="Phone Number" type="text" name="phno" required>
 					</div>	
 					<div class="input-field col s12">	
-						<input placeholder="Room Number" type="text" name="rmno">
+						<input placeholder="Room Number" type="text" name="rmno" required>
 					</div>
 					<div class="input-field col s12" style="padding:0; font-size:17.5px;">Grievance On :  </div>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div></p>

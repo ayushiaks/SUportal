@@ -1,11 +1,13 @@
-<?php
+0<?php
 session_start();
 include("database.php");
+include("../common.php");
  
 $sql="SELECT * FROM fquestions ORDER BY id DESC";
-
+$sql1="SELECT * FROM admin ORDER BY id DESC";
  
 $result=mysqli_query($con, $sql);
+$reult1=mysqli_query($con, $sql1);
 ?>
 <head>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,7 +20,18 @@ $result=mysqli_query($con, $sql);
 </head>
 <body class=" #b3e5fc light-blue lighten-4">
 	<div class="wrapper">
-		<div align="center" style="font-weight:bold; margin-top: 4%;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="z-depth-4" id="button" href="../land.html">Home</a></div>
+		<div align="center" style="font-weight:bold; margin-top: 4%;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a>
+				<?php
+					while($rows1 = mysqli_fetch_array($reult1, MYSQLI_ASSOC)){
+						if(strpos($email, $rows1['email']) !== false){
+					
+				echo '<a class="z-depth-4" id="button" href="new_club_topic.php">Create New Club Notice</a>';
+			}
+		}
+		?>
+
+
+			&nbsp;&nbsp;&nbsp;&nbsp;<a class="z-depth-4" id="button" href="../land.html">Home</a></div>
 		<table class="highlight z-depth-3" id="table" align="center" bgcolor="white">
 			<tr>
 				<td width="15%" align="center"><p style="text-align:center;" class="header">Notice</p></td>
@@ -26,7 +39,7 @@ $result=mysqli_query($con, $sql);
 				<td width="13%" align="center"><p class="header">Date/Time</p></td>
 			</tr>
 		<?php
-		 
+
 
 		while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		?>

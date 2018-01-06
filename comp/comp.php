@@ -1,4 +1,5 @@
 <?php
+include("../common.php");
 
 $error1 ="";
 $error2 = "";
@@ -71,22 +72,22 @@ if(isset($_POST['name']) &&
 			<h4>Register Complaint</h4>
 				<div class="div">
 					<div class="input-field col s12">
-						<input placeholder="Name" type="hidden" name="name">
+						<input type="hidden" name="name" value="<?php echo $name;?>" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="ID" type="text" name="id">
+						<input placeholder="ID" type="text" name="id" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Email" type="hidden" name="email">
+						<input type="hidden" name="email" value="<?php echo $email;?>" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Phone Number" type="text" name="phno">
+						<input placeholder="Phone Number" type="text" name="phno" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Room Number" type="text" name="rmno">
+						<input placeholder="Room Number" type="text" name="rmno" required>
 					</div>
 					<div class="input-field col s12">
-						<input placeholder="Complaint On" type="text" name="compon">
+						<input placeholder="Complaint On" type="text" name="compon" required>
 					</div>
 					<div class="input-field col s12">	
 						<textarea class="materialize-textarea" name="message" placeholder="Type Your Complaint Here"></textarea>
