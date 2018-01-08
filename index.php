@@ -89,6 +89,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 ?>
 
 <!-- HTML CODE with Embeded PHP-->
+<title>BPHC Student Union Portal</title>
 <link rel="stylesheet" href="../css/style.css" />
 <div>
     <?php
@@ -98,7 +99,10 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     */
     if (isset($authUrl)) {
         echo "<div id=\"lgn-con\">
-            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a>
+            <h1>Student Union Portal</h1>
+            <p>Please login with your BITSmail to continue:
+            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a></p>
+
         </div>";
     } else {
         /*print "ID: {$id} <br>";
@@ -110,12 +114,12 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
 
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html') ;  
+        header('Location: land.html') ;
         $_SESSION['email']=$email;
         $_SESSION['name']=$name;
 
-        
-        
+
+
         }
         else{
           echo"Login failed. Login with Bitsmail.";
