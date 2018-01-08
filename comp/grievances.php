@@ -6,15 +6,15 @@ $msg = "";
 
 $var = mysqli_connect("localhost", "root", "");
 if(isset($_POST['name']) &&
-	isset($_POST['id']) &&
-	isset($_POST['email']) &&
-	isset($_POST['phno'])&&
-	isset($_POST['rmno'])&&
-	isset($_POST['gr'])&&
-	isset($_POST['gr_others'])&&
-	isset($_POST['gr_to'])&&
-	isset($_POST['gr_to_others'])&&
-	isset($_POST['message']))
+isset($_POST['id']) &&
+isset($_POST['email']) &&
+isset($_POST['phno'])&&
+isset($_POST['rmno'])&&
+isset($_POST['gr'])&&
+isset($_POST['gr_others'])&&
+isset($_POST['gr_to'])&&
+isset($_POST['gr_to_others'])&&
+isset($_POST['message']))
 {
 	$name = $_POST['name'];
 	$id = $_POST['id'];
@@ -29,13 +29,13 @@ if(isset($_POST['name']) &&
 
 
 	if(!empty($name) &&
-	   !empty($id) &&
-	   !empty($email) &&
-	   !empty($phno)&&
-	   !empty($rmno)&&
-	   !empty($gr)&&
-	   !empty($gr_to)&&
-	   !empty($message)) 	
+	!empty($id) &&
+	!empty($email) &&
+	!empty($phno)&&
+	!empty($rmno)&&
+	!empty($gr)&&
+	!empty($gr_to)&&
+	!empty($message))
 	{
 		if(($gr == 'Other' && empty($gr_others)) || ($gr_to == 'Other' && empty($gr_to_others)))
 		{
@@ -44,16 +44,16 @@ if(isset($_POST['name']) &&
 		else
 		{
 			$query = "INSERT INTO `cng`.`grievance_records` VALUES ('','".mysqli_real_escape_string($var,$name)."',
-												        '".mysqli_real_escape_string($var,$id)."',
-												        '".mysqli_real_escape_string($var,$email)."',
-												        '".mysqli_real_escape_string($var,$phno)."',
-												        '".mysqli_real_escape_string($var,$rmno)."',
-												        '".mysqli_real_escape_string($var,$gr)."',
-												        '".mysqli_real_escape_string($var,$gr_others)."',
-												        '".mysqli_real_escape_string($var,$gr_to)."',
-												        '".mysqli_real_escape_string($var,$gr_to_others)."',
-												        '".mysqli_real_escape_string($var,$message)."')";
-			
+			'".mysqli_real_escape_string($var,$id)."',
+			'".mysqli_real_escape_string($var,$email)."',
+			'".mysqli_real_escape_string($var,$phno)."',
+			'".mysqli_real_escape_string($var,$rmno)."',
+			'".mysqli_real_escape_string($var,$gr)."',
+			'".mysqli_real_escape_string($var,$gr_others)."',
+			'".mysqli_real_escape_string($var,$gr_to)."',
+			'".mysqli_real_escape_string($var,$gr_to_others)."',
+			'".mysqli_real_escape_string($var,$message)."')";
+
 			if($query_run = mysqli_query($var,$query))
 			{
 				$msg = "Your from has been submitted";
@@ -62,52 +62,44 @@ if(isset($_POST['name']) &&
 			{
 				die(mysqli_error($var));
 			}
-		}	
+		}
 	}
 	else{
 		$error2 = "Fill in all the fields";
 	}
 }
-	
+
 ?>
 
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-    	<link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#gr_others").hide();
 
-      <!--Let browser know website is optimized for mobile-->
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<meta charset="utf-8">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
+		$( "#gr_choice_3" ).change(function() {
+			var val = $("#gr_choice_3").val();
+			if(val=="Other"){
+				$("#gr_others").show();
+			} else {
 				$("#gr_others").hide();
+			}
+		});
+		$("#gr_to_others").hide();
 
-				$( "#gr_choice_3" ).change(function() {
-	  				var val = $("#gr_choice_3").val();
-					if(val=="Other"){
-					    $("#gr_others").show();
-					} else {
-					    $("#gr_others").hide();
-					}
-				});
+		$( "#gr_to_choice_3" ).change(function() {
+			var val = $("#gr_to_choice_3").val();
+			if(val=="Other"){
+				$("#gr_to_others").show();
+			} else {
 				$("#gr_to_others").hide();
-
-				$( "#gr_to_choice_3" ).change(function() {
-	  				var val = $("#gr_to_choice_3").val();
-					if(val=="Other"){
-					    $("#gr_to_others").show();
-					} else {
-					    $("#gr_to_others").hide();
-					}
-					});
-			});
-		</script>
-		<link rel="stylesheet" href="../css/grievances.css" />
-	</head>
+			}
+		});
+	});
+	</script>
+</head>
 
 	<body>
 		<div class="row">	
@@ -157,4 +149,3 @@ if(isset($_POST['name']) &&
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>	
 	</body>
-</html>

@@ -86,6 +86,11 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 ?>
 
 <!-- HTML CODE with Embeded PHP-->
+<<<<<<< HEAD
+=======
+<title>BPHC Student Union Portal</title>
+<link rel="stylesheet" href="../css/style.css" />
+>>>>>>> front-end: add missing styles
 <div>
     <?php
     /*
@@ -93,7 +98,16 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
+<<<<<<< HEAD
         echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
+=======
+        echo "<div id=\"lgn-con\">
+            <h1>Student Union Portal</h1>
+            <p>Please login with your BITSmail to continue:
+            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a></p>
+
+        </div>";
+>>>>>>> front-end: add missing styles
     } else {
         /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
@@ -105,12 +119,12 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 
 <<<<<<< HEAD
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html') ;  
+        header('Location: land.html') ;
         $_SESSION['email']=$email;
         $_SESSION['name']=$name;
 
-        
-        
+
+
         }
 =======
         if(strpos($email, '@hyderabad.bits-pilani.ac.in') !== false){
