@@ -56,7 +56,9 @@ isset($_POST['message']))
 
 			if($query_run = mysqli_query($var,$query))
 			{
-				$msg = "Your from has been submitted";
+				sleep(2);
+				header("Location: ../land.html");
+				
 			}
 			else
 			{
@@ -97,29 +99,63 @@ isset($_POST['message']))
 				$("#gr_to_others").hide();
 			}
 		});
-	});
-	</script>
-</head>
 
+				  
+    				
+	                    var modal = document.getElementById('myModal');
+
+	                        // Get the button that opens the modal
+	                    var btn = document.getElementById("myBtn");
+
+	                        // Get the <span> element that closes the modal
+	                    var span = document.getElementsByClassName("close")[0];
+
+	                        // When the user clicks on the button, open the modal 
+	                    btn.onclick = function() 
+	                    {
+	                        	modal.style.display = "block";
+	                        
+	                           
+	                    }
+
+	                        // When the user clicks on <span> (x), close the modal
+	                    span.onclick = function() 
+	                    {
+	                        modal.style.display = "none";
+	                    }
+	                       // When the user clicks anywhere outside of the modal, close it
+	                    window.onclick = function(event) 
+	                    {
+	                        if (event.target == modal) 
+	                        {
+	                            modal.style.display = "none";
+	                        }
+                   		}
+               		
+            });  		
+				
+		</script>
+		<link rel="stylesheet" href="../css/grievances.css" />
+	</head>
 	<body>
 		<div class="row">	
-			<form class="form #e3f2fd blue lighten-5 z-depth-3" action="grievances.php" method="POST" enctype="multipart/form-data">
+			<form class="form #e3f2fd blue lighten-5 z-depth-3" action="comp/grievances.php" method="POST" enctype="multipart/form-data">
 				<h4>Greivance Form </h4>
 				<div class="div">
 					<div class="input-field col s12">
-						<input type="text" name="name" value="<?php echo $name;?>" required/>
+						<input type="hidden" name="name" value="<?php echo $name;?>" required/>
 					</div>
 					<div class="input-field col s12">	
-						<input type="text" name="email" value="<?php echo $email;?>" required>
+						<input type="hidden" name="email" value="<?php echo $email;?>" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="ID Number" type="text" name="id" required>
+						<input class="form-field" placeholder="ID Number" type="text" name="id" required>
 					</div>
 					<div class="input-field col s12">	
-						<input placeholder="Phone Number" type="text" name="phno" required>
+						<input class="form-field" placeholder="Phone Number" type="text" name="phno" required>
 					</div>	
 					<div class="input-field col s12">	
-						<input placeholder="Room Number" type="text" name="rmno" required>
+						<input class="form-field" placeholder="Room Number" type="text" name="rmno" required>
 					</div>
 					<div class="input-field col s12" style="padding:0; font-size:17.5px;">Grievance On :  </div>
 							<p><div class="choice"><input type="radio" class="with-gap" id="gr_choice_1" name="gr" value="EC"><label for="gr_choice_1">EC</label><br></div></p>
@@ -137,13 +173,25 @@ isset($_POST['message']))
 					
 					
 					<div class="input-field col s12">		
-						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
+						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40" required></textarea>
 					</div>
-
-						<div><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a style="margin-left:35%; font-size:20px;" class="z-depth-4 button gr_anonymous">Fill Anonymously</a></div>	
-
+						<div><button id="myBtn" class="z-depth-4 button"><input id="remove" type="submit" name="submit" value="Submit"></button>
+							<a style="margin-left:35%; font-size:20px;" class="z-depth-4 button gr_anonymous">Fill Anonymously</a></div>	
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
-				</div>		
+					</div>		
+					<!-- Trigger/Open The Modal -->
+					
+
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+					    <span class="close">&times;</span>
+					    <h5 style="text-align:center;"><br><br>Your Grievance has been submitted sucessfully.<br><br></h5>
+					  </div>
+
+					</div>
 			</form>
 		</div>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

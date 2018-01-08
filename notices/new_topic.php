@@ -25,10 +25,17 @@ include("../common.php");
 					<textarea placeholder="Details" id="textarea1" class="materialize-textarea" name="detail" required></textarea>
 				</div>
 				<div class="input-field col s12">	
+<<<<<<< HEAD
 					<input  name="name" type="text" id="name" size="50" value="<?php echo $name;?>" required />
 				</div>
 				<div class="input-field col s12">	
 					<input name="email" type="text" id="email" size="50" value="<?php echo $email;?>" required/>
+=======
+					<input  name="name" type="hidden" id="name" size="50" value="<?php echo $name;?>" required />
+				</div>
+				<div class="input-field col s12">	
+					<input name="email" type="hidden" id="email" size="50" value="<?php echo $email;?>" required/>
+>>>>>>> front end changes
 				</div>
 				<div class="input-field col s12 file-field input-field">
 			        <div class="btn  upload">

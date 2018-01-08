@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("database.php");
 include("../common.php");
  
@@ -55,6 +54,10 @@ $reult1=mysqli_query($con, $sql1);
 		?>
 
 		</table>
+<<<<<<< HEAD
+=======
+		
+>>>>>>> front end changes
 	</div>	
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
