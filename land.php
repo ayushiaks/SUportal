@@ -3,10 +3,10 @@ session_start();
 include("database.php");
 
 
-
+ 
 $sql="SELECT * FROM club ORDER BY id DESC";
 $sql1="SELECT * FROM admin";
-
+ 
 $result=mysqli_query($con, $sql);
 $result1=mysqli_query($con, $sql1);
 
@@ -59,20 +59,20 @@ $result1=mysqli_query($con, $sql1);
                         <p>
                             <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
                                 <tr>
-
+        
                                 <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-
+        
                                 </tr>
                                         <?php
-
+ 
 
                                             while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                                                  while($rows['type'] == 'Technical'){
                                         ?>
                                 <tr>
-
+    
                                 <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-
+   
                                 </tr>
                                 </BR>
                                 </td></BR></td></tr>
@@ -80,7 +80,7 @@ $result1=mysqli_query($con, $sql1);
 
 
                                         <?php
-                                        // Exit looping and close connection
+                                        // Exit looping and close connection 
                                         }
                                         ?>
 
@@ -93,20 +93,20 @@ $result1=mysqli_query($con, $sql1);
                         <h1>Cultural</h1>
                         <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
                                 <tr>
-
+        
                                 <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-
+        
                                 </tr>
                                         <?php
-
+ 
 
                                             while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                                                  while($rows['type'] == 'Cultural'){
                                         ?>
                                 <tr>
-
+    
                                 <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-
+   
                                 </tr>
                                 </BR>
                                 </td></BR></td></tr>
@@ -114,7 +114,7 @@ $result1=mysqli_query($con, $sql1);
 
 
                                         <?php
-                                        // Exit looping and close connection
+                                        // Exit looping and close connection 
                                         }
                                         ?></p>
                         <div class="more" id="cult">
@@ -125,20 +125,20 @@ $result1=mysqli_query($con, $sql1);
                         <h1>Sports</h1>
                         <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
                                 <tr>
-
+        
                                 <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-
+        
                                 </tr>
                                         <?php
-
+ 
 
                                             while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                                                  while($rows['type'] == 'Sports'){
                                         ?>
                                 <tr>
-
+    
                                 <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-
+   
                                 </tr>
                                 </BR>
                                 </td></BR></td></tr>
@@ -146,7 +146,7 @@ $result1=mysqli_query($con, $sql1);
 
 
                                         <?php
-                                        // Exit looping and close connection
+                                        // Exit looping and close connection 
                                         }
                                         ?></p>
                         <div class="more" id="sports">

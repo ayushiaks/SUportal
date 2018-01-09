@@ -107,6 +107,15 @@ if(isset($_POST['name']) &&
 					}
 					});
 
+				$( "#gr_to_choice_3" ).change(function() {
+	  				var val = $("#gr_to_choice_3").val();
+					if(val=="Other"){
+					    $("#gr_to_others").show();
+					} else {
+					    $("#gr_to_others").hide();
+					}
+					});
+
 				  
     				
 	                    var modal = document.getElementById('myModal');
