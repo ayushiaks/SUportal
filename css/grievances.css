@@ -4,7 +4,8 @@
 }
 .form{
 	padding:2.5%;
-	margin:5%;
+    margin:5%;
+    width:90vw;
 }
 .button{
 	padding:10px;
