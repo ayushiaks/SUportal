@@ -3,12 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css" />
-<<<<<<< HEAD
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
-=======
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -16,7 +10,6 @@
       <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
->>>>>>> front end changes
         <title>Student Union Portal</title>
 
     </head>
@@ -53,21 +46,21 @@
                         <h1>Technical</h1>
                         <p>Random Stuff here</p>
                         <div class="more" id="tech">
-                           <a href="notices/technotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
                         <h1>Cultural</h1>
                         <p>Random Stuff here</p>
                         <div class="more" id="cult">
-                           <a href="notices/cultnotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
                         <h1>Sports</h1>
                         <p>Random Stuff here</p>
                         <div class="more" id="sports">
-                           <a href="notices/sportsnotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
@@ -85,18 +78,18 @@
         <script type="text/javascript" language="javascript">
         $(document).ready(function() {
             $(document).on('click','#tech',function () {
-                $('#ajax-con').load('info/tech.html #ajax-con', function() {
-
+                $('#ajax-con').load('notices/technotice.php', function() {
+                    $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#cult',function () {
-                $('#ajax-con').load('info/cult.html', function() {
-
+                $('#ajax-con').load('notices/cultnotice.php', function() {
+                    $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#sports',function () {
-                $('#ajax-con').load('info/sports.html', function() {
-
+                $('#ajax-con').load('notices/sportsnotice.php', function() {
+                        $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#others',function () {
@@ -111,18 +104,12 @@
             });
             $(document).on('click','#contact',function () {
                 $('#ajax-con').load('about_us.html', function() {
-<<<<<<< HEAD
-=======
                     $('head').append('<link rel="stylesheet" href="css/about_us.css" />');
->>>>>>> front end changes
                 });
             });
             $(document).on('click','#cng',function () {
                 $('#ajax-con').load('comp/grievances.php', function() {
-<<<<<<< HEAD
-=======
                     $('head').append('<link rel="stylesheet" href="css/grievances.css" />');
->>>>>>> front end changes
                 });
             });
 
@@ -132,21 +119,14 @@
             });
             $(document).on('click','#comp',function () {
                 $('#ajax-con').load('comp/comp.php', function() {
-<<<<<<< HEAD
-=======
                     $('head').append('<link rel="stylesheet" href="css/complaints.css" />');
->>>>>>> front end changes
                 });
             });
 
             $(document).on('click','.co_anonymous',function () {
                 $('#ajax-con').load('comp/co_anonymous.php', function() {
                 });
-<<<<<<< HEAD
-            });
-=======
             });                      
->>>>>>> front end changes
         });
         </script>
     </body>

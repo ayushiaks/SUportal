@@ -98,7 +98,7 @@ if(isset($_POST['name']) &&
 	</head>
 	<body class="#4db6ac teal lighten-2">
 		<div class="row">
-			<form id="form" class="col s12 #e0f2f1 teal lighten-5" action="comp/co_anonymous.php" method="POST" enctype="multipart/form-data">
+			<form id="form" class="col s12 #e0f2f1 teal lighten-5 z-depth-3" action="comp/co_anonymous.php" method="POST" enctype="multipart/form-data">
 			<h4>Register Complaint</h4>
 				<div class="div">
 					<div class="input-field col s12">

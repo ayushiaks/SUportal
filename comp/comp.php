@@ -7,12 +7,12 @@ $msg = "";
 
 $var = mysqli_connect("localhost", "root", "");
 if(isset($_POST['name']) &&
-isset($_POST['id']) &&
-isset($_POST['email']) &&
-isset($_POST['phno'])&&
-isset($_POST['rmno'])&&
-isset($_POST['compon'])&&
-isset($_POST['message']))
+	isset($_POST['id']) &&
+	isset($_POST['email']) &&
+	isset($_POST['phno'])&&
+	isset($_POST['rmno'])&&
+	isset($_POST['compon'])&&
+	isset($_POST['message']))
 {
 	$name = $_POST['name'];
 	$id = $_POST['id'];
@@ -23,21 +23,21 @@ isset($_POST['message']))
 	$compon = $_POST['compon'];
 
 	if(!empty($name) &&
-	!empty($id) &&
-	!empty($email) &&
-	!empty($phno)&&
-	!empty($rmno)&&
-	!empty($compon)&&
-	!empty($message))
+	   !empty($id) &&
+	   !empty($email) &&
+	   !empty($phno)&&
+	   !empty($rmno)&&
+	   !empty($compon)&&
+	   !empty($message)) 	
 	{
 		$query = "INSERT INTO `cng`.`complaint_records` VALUES ('','".mysqli_real_escape_string($var,$name)."',
-		'".mysqli_real_escape_string($var,$id)."',
-		'".mysqli_real_escape_string($var,$email)."',
-		'".mysqli_real_escape_string($var,$phno)."',
-		'".mysqli_real_escape_string($var,$rmno)."',
-		'".mysqli_real_escape_string($var,$compon)."',
-		'".mysqli_real_escape_string($var,$message)."')";
-
+												        '".mysqli_real_escape_string($var,$id)."',
+												        '".mysqli_real_escape_string($var,$email)."',
+												        '".mysqli_real_escape_string($var,$phno)."',
+												        '".mysqli_real_escape_string($var,$rmno)."',
+												        '".mysqli_real_escape_string($var,$compon)."',
+												        '".mysqli_real_escape_string($var,$message)."')";
+			
 		if($query_run = mysqli_query($var,$query))
 		{
 			sleep(2);
@@ -47,13 +47,13 @@ isset($_POST['message']))
 		{
 			die(mysqli_error($var));
 		}
-
+			
 	}
 	else{
 		$error2 = "Fill in all the fields";
 	}
 }
-
+	
 ?>
 
 <html>

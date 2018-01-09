@@ -2,17 +2,10 @@
 	include("database.php");
 
 	extract($_POST);
-<<<<<<< HEAD
-	$event_name=$_POST['event_name'];
-	$detail=$_POST['detail'];
-	$location=$_POST['location'];
-	$image=$_POST['image'];
-=======
 	extract($_FILES);
 	$event_name=$_POST['event_name'];
 	$detail=$_POST['detail'];
 	$location=$_POST['location'];
->>>>>>> front end changes
 	$datetime=date("d/m/y h:i:s");
 	$type=$_POST['type'];
 	echo $datetime;
@@ -42,19 +35,11 @@
 	}
 
 	// insert into db
-<<<<<<< HEAD
-	$sql="INSERT INTO club (event_name, detail, location, image, type, datetime) VALUES ('event_name', '$detail', '$location', '$image', '$type', '$datetime')";
-	$result=mysqli_query($con, $sql);
- 
-	if($result){
-		echo "Successful<BR>";
-=======
 	$sql="INSERT INTO club (event_name, detail, location, image, type, datetime) VALUES ('$event_name', '$detail', '$location', '$file_name', '$type', '$datetime')";
 	$result=mysqli_query($con, $sql);
  
 	if($result){
 		header("Location: ../land.html");
->>>>>>> front end changes
 		
 	}
 	else {

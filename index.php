@@ -89,15 +89,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 ?>
 
 <!-- HTML CODE with Embeded PHP-->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<title>BPHC Student Union Portal</title>
 <link rel="stylesheet" href="../css/style.css" />
->>>>>>> front-end: add missing styles
-=======
-<link rel="stylesheet" href="../css/style.css" />
->>>>>>> front end changes
 <div>
     <?php
     /*
@@ -105,22 +97,9 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
-=======
-        echo "<div id=\"lgn-con\">
-            <h1>Student Union Portal</h1>
-            <p>Please login with your BITSmail to continue:
-            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a></p>
-
-        </div>";
->>>>>>> front-end: add missing styles
-=======
         echo "<div id=\"lgn-con\">
             <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a>
         </div>";
->>>>>>> front end changes
     } else {
         /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
@@ -130,21 +109,6 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         print "Url: {$profile_url} <br><br>";
         echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html') ;
-        $_SESSION['email']=$email;
-        $_SESSION['name']=$name;
-
-
-
-        }
-=======
-        if(strpos($email, '@hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html')        ;}
->>>>>>> some bug fixes, front end, and other random stuff
-=======
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
         header('Location: land.html') ;  
         $_SESSION['email']=$email;
@@ -153,7 +117,6 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         
         
         }
->>>>>>> front end changes
         else{
           echo"Login failed. Login with Bitsmail.";
         }

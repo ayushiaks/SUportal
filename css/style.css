@@ -5,19 +5,7 @@
     font-family: 'Raleway', sans-serif;
 }
 body {
-    /* background: url('../images/bphc.jpg'); */
     background-color: #272727;
-<<<<<<< HEAD
-    background-size: cover;
-    overflow-x: hidden;
-}
-a {
-    color: white;
-}
-a:visited {
-    text-decoration: none;
-    color: white;
-=======
     overflow-x: hidden;
 }
 a {
@@ -26,7 +14,6 @@ a {
 a:visited {
     text-decoration: none;
     color: black;
->>>>>>> front end changes
 }
 a:link {
     text-decoration: none;
@@ -47,11 +34,7 @@ a:link {
     flex-direction: row;
     justify-content: space-around;
     height: 60px;
-<<<<<<< HEAD
-    background-color: rgba(0,0,0,0.2);
-=======
     background-color:#9e9e9e;
->>>>>>> front end changes
 }
 #nav-items {
     color: white;
@@ -60,12 +43,9 @@ a:link {
     flex-direction: row;
     text-decoration: none;
 }
-<<<<<<< HEAD
-=======
 #nav-items > li{
     font-size:20px;
 }
->>>>>>> front end changes
 .sub-menu {
     display: none;
     text-decoration: none;
@@ -85,17 +65,16 @@ a:link {
     color: white;
     padding: 20px;
 }
+#divider {
+    width: 100vw;
+    height: 7.5px;
+    background-color: white;
+}
 #content {
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
-    /* background: url('../images/bphc.jpg'); */
-    background-size: cover;
-    color: white;
-=======
     background: url('../images/bphc.jpg');
     background-size: cover;
->>>>>>> front end changes
 }
 .more {
     padding: 3px;
@@ -103,10 +82,6 @@ a:link {
     border-radius: 2px;
     transition: 0.5s ease;
     cursor: pointer;
-<<<<<<< HEAD
-    background-color: rgba(0,0,0,0.5);
-=======
->>>>>>> front end changes
 }
 .category {
     display: flex;
@@ -135,146 +110,10 @@ li.post {
 #con-head {
     padding: 25px;
 }
-<<<<<<< HEAD
-#tech {
-    /* background-image: url("../images/tech.jpg"); */
-    background-size: cover;
-}
-#wrapper {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    /* height: 100vh; */
-}
-li.post {
-    padding: 20px;
-    list-style: none;
-}
-#con-head {
-    padding: 25px;
-}
-li.post > img {
-    width: 15vw;
-    border-radius: 50%;
-}
-.form-con {
-    width: 100vw;
-}
-.form-con input,textarea {
-    width: 100%;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    border-radius: 4px;
-}
-.form-con input:focus,textarea {
-    color: black;
-}
-input.submit {
-    color: white;
-}
-#cng-head {
-    font-size: 2.5em;
-    padding: 30px;
-}
-.form-con > p {
-    padding: 20px;
-}
-#lgn-con {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: url('../images/bphc.jpg');
-    background-size: cover;
-    color: white;
-}
-#lgn-con > h1 {
-    font-size: 2.4em;
-    padding: 100px;
-}
-#lgn-con > p {
-    padding: 30px;
-}
-#lgn-head {
-    color: white;
-    text-decoration: none;
-    font-size: 1.3em;
-    border: 0.5px solid white;
-    border-radius: 2px;
-    padding: 5px;
-    background-color: rgba(0,0,0,0.2);
-}
-#home,#twoonetwo,#contact,#cng,#comp {
-    cursor: pointer;
-}
-.not-con {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0,0,0,0.5);
-}
-.event-name {
-    display: flex;
-    flex-direction: row;
-}
-#tot-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
-}
-#tot-wrapper > .col {
-    width: 25vw;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 4px;
-    margin: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-#ajax-con > .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
-}
-.su-member {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.name {
-    position: absolute;
-    top: calc(100px - 2em);
-    left: 180px;
-}
-.name > p {
-    display: inline;
-    background-color: rgba(0,0,0,0.5);
-    margin: 5px;
-    color: #C0432F;
-    font-size: 2em;
-}
-#image {
-    height: 200px;
-    border-radius: 50%;
-=======
 li.post > img {
     width: 15vw;
     border-radius: 50%;
 }
 #home,#twoonetwo,#contact,#cng,#comp,#notice {
     cursor: pointer;
->>>>>>> front end changes
 }
