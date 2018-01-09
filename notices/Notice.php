@@ -19,7 +19,7 @@ $reult1=mysqli_query($con, $sql1);
 </head>
 <body class=" #b3e5fc light-blue lighten-4">
 	<div class="wrapper">
-		<div align="center" style="font-weight:bold; margin-top: 4%;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a>
+		<div align="center" style="font-weight:bold; margin-top: 4%;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<?php
 					while($rows1 = mysqli_fetch_array($reult1, MYSQLI_ASSOC)){
 						if(strpos($email, $rows1['email']) !== false){

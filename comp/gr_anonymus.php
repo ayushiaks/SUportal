@@ -138,7 +138,7 @@ if(isset($_POST['name']) &&
 	</head>
 	<body class="#4db6ac teal lighten-2">
 		<div class="row">	
-			<form class="form #e0f2f1 teal lighten-5" action="comp/gr_anonymus.php" method="POST" enctype="multipart/form-data">
+			<form class="form #e0f2f1 teal lighten-5 z-depth-3" action="comp/gr_anonymus.php" method="POST" enctype="multipart/form-data">
 				<h4>Greivance Form (Anonymous)</h4>
 				<div class="div">
 					<div class="input-field col s12">
