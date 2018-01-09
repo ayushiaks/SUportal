@@ -108,6 +108,7 @@ if(isset($_POST['name']) &&
 		</script>
 		<link rel="stylesheet" href="../css/grievances.css" />
 	</head>
+
 	<body>
 		<div class="row">	
 			<form class="form #e3f2fd blue lighten-5 z-depth-3" action="grievances.php" method="POST" enctype="multipart/form-data">
@@ -146,7 +147,9 @@ if(isset($_POST['name']) &&
 					<div class="input-field col s12">		
 						<textarea placeholder="Grievance" class="materialize-textarea" name="message" placeholder="Type Your Message Here" rows="6" cols="40"></textarea>
 					</div>
+
 						<div><input class="z-depth-4 button" type="submit" name="submit" value="Submit"><a style="margin-left:35%; font-size:20px;" class="z-depth-4 button gr_anonymous">Fill Anonymously</a></div>	
+
 						<p style="margin:1%; text-align:center; color:red; font-size: 20px;"><?php echo $error1.$error2.$msg; ?></p>
 				</div>		
 			</form>

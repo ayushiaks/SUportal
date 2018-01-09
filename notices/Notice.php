@@ -1,4 +1,4 @@
-0<?php
+<?php
 session_start();
 include("database.php");
 include("../common.php");
@@ -55,7 +55,6 @@ $reult1=mysqli_query($con, $sql1);
 		?>
 
 		</table>
-		
 	</div>	
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

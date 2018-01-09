@@ -21,5 +21,5 @@ a:hover{
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:  black;
-     opacity: 1 !important;
+     opacity: 0.7 !important;
 }

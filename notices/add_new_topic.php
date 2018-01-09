@@ -40,9 +40,7 @@
 		}
 		mysqli_close($con);
 	}
-	else{
-			header('Location: Notice.php');
-	}
+
 
 
 ?>
