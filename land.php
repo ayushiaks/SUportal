@@ -48,7 +48,7 @@ $result=mysqli_query($con, $sql1);
                     <li id="cng">Grievances</li>
                     <li id="comp">Complaints</li>
                     <li id="notice"><a class="tot_a" href="notices/Notice.php">Notice</a></li>
-                    <li>Calendar</li>
+                    <li><a class="tot_a" href="cal.php">Calendar</a></li>
                     <li><a class="tot_a" href="logout.php">Logout</a></li>
                 </ul>
                 <div id="login">
