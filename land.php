@@ -1,14 +1,16 @@
 <?php
 session_start();
-include("database.php");
+include("notices/database.php");
 
 
  
 $sql="SELECT * FROM club ORDER BY id DESC";
 $sql1="SELECT * FROM admin";
  
-$result=mysqli_query($con, $sql);
-$result1=mysqli_query($con, $sql1);
+$result1=mysqli_query($con, $sql);
+$result2=mysqli_query($con, $sql);
+$result3=mysqli_query($con, $sql);
+$result=mysqli_query($con, $sql1);
 
 ?>
 <!DOCTYPE html>
@@ -24,15 +26,16 @@ $result1=mysqli_query($con, $sql1);
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>Student Union Portal</title>
+
     </head>
     <body>
-        <div id="wrapper" class="#90caf9 blue lighten-3">
+        <div id="wrapper">
             <div id="nav-bar">
                 <div id="logo">
                     <!-- TODO: Add BITS Logo here -->
                 </div>
                 <ul id="nav-items">
-                    <li id="home"><a class="tot_a" href="land.html">Home</a></li>
+                    <li id="home"><a class="tot_a" href="land.php">Home</a></li>
                     <li class="parent-menu">
                         <a class="tot_a" href="#">212 Bus</a>
                         <ul class="sub-menu">
@@ -56,101 +59,62 @@ $result1=mysqli_query($con, $sql1);
                 <div id="content">
                     <div class="category">
                         <h1>Technical</h1>
-                        <p>
-                            <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
-                                <tr>
-        
-                                <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-        
-                                </tr>
                                         <?php
- 
-
-                                            while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                                 while($rows['type'] == 'Technical'){
+                                        $ctr1 = 0;
+                                            while($rows = mysqli_fetch_array($result1, MYSQLI_ASSOC)){
+                                                if(($rows['type'] == 'Technical') && $ctr1 < 10){
                                         ?>
-                                <tr>
-    
-                                <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-   
-                                </tr>
-                                </BR>
-                                </td></BR></td></tr>
-
-
-
+                                        <p class="club_notice_content">            
+                                            <?php    echo $rows['event_name']; ?>
+                                        </p>  
                                         <?php
                                         // Exit looping and close connection 
+                                        $ctr1++;
                                         }
+                                    }
                                         ?>
-
-                        </p>
                         <div class="more" id="tech">
-                           <a href="notices/technotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
                         <h1>Cultural</h1>
-                        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
-                                <tr>
-        
-                                <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-        
-                                </tr>
                                         <?php
- 
-
-                                            while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                                 while($rows['type'] == 'Cultural'){
+                                        $ctr2 = 0;
+                                            while($rows = mysqli_fetch_array($result2, MYSQLI_ASSOC)){
+                                                if(($rows['type'] == 'Cultural')&& $ctr2 < 10){
                                         ?>
-                                <tr>
-    
-                                <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-   
-                                </tr>
-                                </BR>
-                                </td></BR></td></tr>
-
-
-
+                                        <p class="club_notice_content">            
+                                            <?php echo $rows['event_name']; ?>
+                                        </p>  
                                         <?php
                                         // Exit looping and close connection 
+                                        $ctr2++;
                                         }
-                                        ?></p>
+                                    }
+                                        ?>
                         <div class="more" id="cult">
-                           <a href="notices/cultnotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
                         <h1>Sports</h1>
-                        <p><table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
-                                <tr>
-        
-                                <td width="15%" align="center" bgcolor="#E6E6E6"><strong>Notice</strong></td>
-        
-                                </tr>
                                         <?php
- 
-
-                                            while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                                 while($rows['type'] == 'Sports'){
+                                        $ctr3=0;
+                                            while($rows = mysqli_fetch_array($result3, MYSQLI_ASSOC)){
+                                                if(($rows['type'] == 'Sports')&&$ctr3<10){
                                         ?>
-                                <tr>
-    
-                                <td bgcolor="#FFFFFF"><?php echo $rows['event_name']; ?><BR></td>
-   
-                                </tr>
-                                </BR>
-                                </td></BR></td></tr>
-
-
-
+                                        <p class="club_notice_content">            
+                                            <?php echo $rows['event_name']; ?>
+                                        </p>  
                                         <?php
                                         // Exit looping and close connection 
+                                        $ctr3++;
                                         }
-                                        ?></p>
+                                    }
+                                        ?></p>                        
                         <div class="more" id="sports">
-                           <a href="notices/sportsnotice.php"> Know More </a>
+                           <a href="#"> Know More </a>
                         </div>
                     </div>
                     <div class="category">
@@ -168,18 +132,18 @@ $result1=mysqli_query($con, $sql1);
         <script type="text/javascript" language="javascript">
         $(document).ready(function() {
             $(document).on('click','#tech',function () {
-                $('#ajax-con').load('info/tech.html #ajax-con', function() {
-
+                $('#ajax-con').load('notices/technotice.php', function() {
+                    $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#cult',function () {
-                $('#ajax-con').load('info/cult.html', function() {
-
+                $('#ajax-con').load('notices/cultnotice.php', function() {
+                    $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#sports',function () {
-                $('#ajax-con').load('info/sports.html', function() {
-
+                $('#ajax-con').load('notices/sportsnotice.php', function() {
+                        $('head').append('<link rel="stylesheet" href="css/club_notice.css" />');
                 });
             });
             $(document).on('click','#others',function () {
@@ -216,11 +180,16 @@ $result1=mysqli_query($con, $sql1);
             $(document).on('click','.co_anonymous',function () {
                 $('#ajax-con').load('comp/co_anonymous.php', function() {
                 });
-            });
+            });                      
         });
         </script>
     </body>
-<?php
-    mysqli_close($con);
-?>
 </html>
+
+
+
+
+
+
+
+

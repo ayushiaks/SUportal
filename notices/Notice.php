@@ -30,7 +30,7 @@ $reult1=mysqli_query($con, $sql1);
 		?>
 
 
-			&nbsp;&nbsp;&nbsp;&nbsp;<a class="z-depth-4" id="button" href="../land.html">Home</a></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a class="z-depth-4" id="button" href="../land.php">Home</a></div>
 		<table class="highlight z-depth-3" id="table" align="center" bgcolor="white">
 			<tr>
 				<td width="15%" align="center"><p style="text-align:center;" class="header">Notice</p></td>
