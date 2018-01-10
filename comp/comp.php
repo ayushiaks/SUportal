@@ -41,7 +41,7 @@ if(isset($_POST['name']) &&
 		if($query_run = mysqli_query($var,$query))
 		{
 			sleep(2);
-				header("Location: ../land.html");
+				header("Location: ../land.php");
 		}
 		else
 		{

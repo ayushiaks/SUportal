@@ -57,7 +57,7 @@ if(isset($_POST['name']) &&
 			if($query_run = mysqli_query($var,$query))
 			{
 				sleep(2);
-				header("Location: ../land.html");
+				header("Location: ../land.php");
 				
 			}
 			else
@@ -97,6 +97,15 @@ if(isset($_POST['name']) &&
 					}
 				});
 				$("#gr_to_others").hide();
+
+				$( "#gr_to_choice_3" ).change(function() {
+	  				var val = $("#gr_to_choice_3").val();
+					if(val=="Other"){
+					    $("#gr_to_others").show();
+					} else {
+					    $("#gr_to_others").hide();
+					}
+					});
 
 				$( "#gr_to_choice_3" ).change(function() {
 	  				var val = $("#gr_to_choice_3").val();

@@ -24,7 +24,7 @@ $result1=mysqli_query($con, $sql1);
 while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 	if($rows['type'] == 'Technical'){
 ?>
-<div class="club_notice  z-depth-3">
+<div class="club_notice z-depth-3">
 		<p><?php echo $rows['id']; ?></p>
 		<h4 class="center-align"><?php echo $rows['event_name']; ?></h4>
 		<p class="club_notice_detail"><span style="font-weight:bold;">Details:</span>&nbsp;&nbsp;<?php echo $rows['detail']; ?></p>

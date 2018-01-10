@@ -97,9 +97,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
-        echo "<div id=\"lgn-con\">
-            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a>
-        </div>";
+        echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
     } else {
         /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
@@ -110,7 +108,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
 
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.html') ;  
+        header('Location: land.php') ;  
         $_SESSION['email']=$email;
         $_SESSION['name']=$name;
 
