@@ -97,7 +97,11 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
      * else print the retieved data
     */
     if (isset($authUrl)) {
-        echo "<a class='login' href='" . $authUrl . "'><img src='images/glogin.png' height='50px'/></a>";
+        echo "<div id=\"lgn-con\">
+            <h1>Student Union Portal</h1>
+            <p>Please login with your BITSmail to continue:
+            <a class='login' href='" . $authUrl . "'><div id=\"lgn-head\">Login</div></a></p>
+        </div>";
     } else {
         /*print "ID: {$id} <br>";
         print "Name: {$name} <br>";
@@ -108,12 +112,12 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
         echo "<a class='logout' href='?logout'><button>Logout</button></a>";*/
 
         if(strpos($email, 'hyderabad.bits-pilani.ac.in') !== false){
-        header('Location: land.php') ;  
+        header('Location: land.php') ;
         $_SESSION['email']=$email;
         $_SESSION['name']=$name;
 
-        
-        
+
+
         }
         else{
           echo"Login failed. Login with Bitsmail.";
