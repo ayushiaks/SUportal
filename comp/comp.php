@@ -58,13 +58,6 @@ isset($_POST['message']))
 
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
-
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="../css/complaints.css" />
 	<script>
 	$(document).ready(function(){
@@ -103,7 +96,7 @@ isset($_POST['message']))
 </head>
 <body>
 	<div class="row">
-		<form class="form" action="comp/comp.php" method="POST" enctype="multipart/form-data">
+		<form id="form" class="z-depth-3" action="comp/comp.php" method="POST" enctype="multipart/form-data">
 			<h4>Register Complaint</h4>
 			<div class="cng-form">
 
@@ -119,7 +112,8 @@ isset($_POST['message']))
 
 				<input placeholder="Complaint On" type="text" name="compon" required></br>
 
-				<textarea name="message" placeholder="Type Your Complaint Here"></textarea>
+				<textarea name="message"  class="materialize-textarea" placeholder="Type Your Complaint Here"></textarea>
+				<br><br><br><br><br>
 			</div>
 			<div><button id="myBtn"><input id="remove" class="submit" type="submit" name="submit" value="Submit"></button>
 				<input type="submit" class=" submitco_anonymous" value="Fill Anonymously"></div>

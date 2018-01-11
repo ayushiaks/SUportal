@@ -146,8 +146,9 @@ isset($_POST['message']))
 </head>
 <body>
 	<div class="row">
-		<form class="form" action="comp/grievances.php" method="POST" enctype="multipart/form-data">
-			<h4>Grievance Form </h4>
+		<form class="form z-depth-3" action="comp/grievances.php" method="POST" enctype="multipart/form-data">
+			<h3>Grievance Form </h3>
+			<br>
 			<div class="cng-form">
 
 				<input type="hidden" name="name" value="<?php echo $name;?>" required/>
@@ -174,7 +175,7 @@ isset($_POST['message']))
 				<p><div class="choice_to"><input type="radio" id="gr_to_choice_3" name="gr_to" value="Other"><label for="gr_to_choice_3">Others</label><br></div></p>
 				<input type="text" placeholder="Please Specify" name="gr_to_others" id="gr_to_others"><br>
 
-				<textarea placeholder="Grievance" name="message" placeholder="Type Your Message Here" rows="6" cols="40" required></textarea>
+				<textarea placeholder="Grievance" name="message"  class="materialize-textarea" placeholder="Type Your Message Here" rows="6" cols="40" required></textarea><br><br><br>
 
 				<div><button id="myBtn"><input id="remove" class="submit" type="submit" name="submit" value="Submit"></button>
 					<input type="submit" class="submitgr_anonymous" value="Fill Anonymously"></div>

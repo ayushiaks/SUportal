@@ -12,7 +12,7 @@ include("../common.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="../css/new_topic.css" />
 </head>
-<body class="#b3e5fc light-blue lighten-4">
+<body>
 <!-- create new topic -->
 	<div class="row">
 		<form id="form" class="col s12 z-depth-4" name="form1" method="post" action="add_new_topic.php" enctype="multipart/form-data">

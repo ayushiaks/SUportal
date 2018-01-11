@@ -96,10 +96,10 @@ if(isset($_POST['name']) &&
                 });   		
 		</script>
 	</head>
-	<body class="#4db6ac teal lighten-2">
+	<body>
 		<div class="row">
-			<form id="form" class="col s12 #e0f2f1 teal lighten-5 z-depth-3" action="comp/co_anonymous.php" method="POST" enctype="multipart/form-data">
-			<h4>Register Complaint</h4>
+			<form id="form" class="col s12 z-depth-3"  style="background-color:black; opacity:0.7;" action="comp/co_anonymous.php" method="POST" enctype="multipart/form-data">
+			<h4>Register Complaint (anonymous)</h4>
 				<div class="div">
 					<div class="input-field col s12">
 						<input placeholder="Name" type="hidden" name="name" value="<?php echo $name;?>">

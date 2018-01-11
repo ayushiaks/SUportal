@@ -17,7 +17,7 @@ $reult1=mysqli_query($con, $sql1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="../css/notices.css" />
 </head>
-<body class=" #b3e5fc light-blue lighten-4">
+<body>
 	<div class="wrapper">
 		<div align="center" style="font-weight:bold; margin-top: 4%;"><a class="z-depth-4" id="button" href="new_topic.php">Create New Notice</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<?php
@@ -43,9 +43,9 @@ $reult1=mysqli_query($con, $sql1);
 		while($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		?>
 			<tr>
-				<td ><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p style="text-align:center;"><?php echo $rows['topic']; ?></p></a></td>
-				<td><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p><?php echo $rows['detail']; ?></p></a></td>
-				<td  bgcolor="#FFFFFF"><p><?php echo $rows['datetime']; ?></p></td>
+				<td ><p style="text-align:center;"><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><?php echo $rows['topic']; ?></a></p></td>
+				<td><p><a href="view_topic.php?id=<?php echo $rows['id']; ?>"><p><?php echo $rows['detail']; ?></a></p></td>
+				<td><p><?php echo $rows['datetime']; ?></p></td>
 			</tr>
 		<?php
 		// Exit looping and close connection 

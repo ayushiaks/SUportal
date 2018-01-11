@@ -12,9 +12,9 @@ include("../common.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="../css/new_topic.css" />
 </head>
-<body class="#b3e5fc light-blue lighten-4">
+<body>
    <div class="row">
-      <form id="form" class="col #f9fbe7 lime lighten-5 s12 z-depth-4" name="form1" method="post" action="add_new_club_topic.php" enctype="multipart/form-data">
+      <form id="form" class="col s12 z-depth-4" name="form1" method="post" action="add_new_club_topic.php" enctype="multipart/form-data">
          <div class="row">
             <h3>Create New Club Notice:</h3>
             <div class="input-field col s12">
@@ -32,7 +32,7 @@ include("../common.php");
             <div class="input-field col s12">   
                <input name="email" type="hidden" id="email" size="50" value="<?php echo $email;?>" required/>
             </div>
-            <div class="input-field col s12" style="padding:0; font-size:17.5px;">Grievance On :  </div>
+            <div class="input-field col s12" style="padding:0; font-size:17.5px;">Notice type :</div>
                      <p><div class="choice"><input type="radio" class="with-gap" id="notice_1" name="type" value="Technical"><label for="notice_1">Technical</label><br></div></p>
                      <p><div class="choice"><input type="radio" class="with-gap" id="notice_2" name="type" value="Cultural"><label for="notice_2">Cultural</label><br></div></p>
                      <p><div class="choice"><input type="radio" class="with-gap" id="notice_3" name="type" value="Sports"><label for="notice_3">Sports</label><br></div></p>               

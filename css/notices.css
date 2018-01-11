@@ -4,13 +4,26 @@
 	padding:0;
 	font-family:"Raleway", sans-serif;
 }
+body{
+	background: url('../images/bphc.jpeg');
+}
 a{
-	color:black;
+	color:white;
 	text-decoration:none;
 }
 .wrapper{
 	display:flex;
 	flex-direction: column;
+	opacity:0.8;
+}
+td{
+	color:white;
+}
+tr:hover p{
+	color:black;
+}
+tr:hover a{
+	color:black;
 }
 a:hover{
 	color:black;
@@ -19,6 +32,7 @@ a:hover{
 #table{
 	display:flex;
 	justify-content:space-around;
+	background-color:black;
 	margin:2.5%;
 	border-radius:5px;
 	width:95vw;
@@ -27,13 +41,14 @@ a:hover{
 #button{
 	padding:10px;
 	border-radius:5px;
-	background-color:white;
+	background-color:black;
+	opacity:0.9;
+	color:white;
 }
 #button:hover{
 	padding:10px;
-	border:1px solid black;
 	border-radius:5px;
-	background-color:white;
+	background-color:black;
 }
 .header{
 	font-weight:bold;

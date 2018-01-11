@@ -18,10 +18,16 @@ $result=mysqli_query($con, $sql1);
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
     <title>Student Union Portal</title>
-
 </head>
 <body>
 
@@ -169,26 +175,26 @@ $result=mysqli_query($con, $sql1);
         });
         $(document).on('click','#contact',function () {
             $('#ajax-con').load('about_us.html', function() {
-                
+                $('head').append('<link rel="stylesheet" href="css/about_us.css" />');
             });
         });
         $(document).on('click','#cng',function () {
             $('#ajax-con').load('comp/grievances.php', function() {
-
+                $('head').append('<link rel="stylesheet" href="css/grievances.css" />');
             });
         });
 
-        $(document).on('click','.gr_anonymous',function () {
+        $(document).on('click','.submitgr_anonymous',function () {
             $('#ajax-con').load('comp/gr_anonymus.php', function() {
             });
         });
         $(document).on('click','#comp',function () {
             $('#ajax-con').load('comp/comp.php', function() {
-
+                $('head').append('<link rel="stylesheet" href="css/complaints.css" />');
             });
         });
 
-        $(document).on('click','.co_anonymous',function () {
+        $(document).on('click','.submitco_anonymous',function () {
             $('#ajax-con').load('comp/co_anonymous.php', function() {
             });
         });

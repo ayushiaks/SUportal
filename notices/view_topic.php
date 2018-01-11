@@ -19,7 +19,7 @@ $rows=mysqli_fetch_array($result, MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="../css/view_topic.css" />
 </head>
-<body class=" #b3e5fc light-blue lighten-4">
+<body>
 	<div class="notice">
 		<div id="border">
 			<div id="topic_name"><h2><?php echo $rows['topic']; ?></h2></div>
